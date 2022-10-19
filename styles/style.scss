@@ -77,13 +77,18 @@ img {
 }
 
 .section {
-  padding: 7rem 0;
+  padding: 6rem 0;
   background-color: var(--light-three);
 }
 
 .section-header {
   text-align: left;
   margin-bottom: 1.5rem;
+
+  .title {
+    font-size: 3rem;
+    font-weight: 400;
+  }
 }
 /* End General Styles */
 
@@ -186,6 +191,7 @@ nav {
   flex-direction: column;
   row-gap: 100px;
   width: 100%;
+  padding: 4rem 0;
 
   .project-content {
     height: 100%;
@@ -223,6 +229,55 @@ nav {
   position: relative;
   width: 100%;
 }
+
+.contact-body {
+  padding: 4rem 0;
+  .grid-2 {
+    grid-template-columns: repeat(2, auto);
+    align-items: flex-start;
+  }
+}
+
+.contact-form {
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .contact-input {
+    padding: 0.5rem;
+    width: 374px;
+    height: 36px;
+  }
+
+  .textarea {
+    height: 196px;
+    resize: none;
+  }
+
+  .column-left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-right: 8px;
+  }
+
+  .column-right {
+    margin-left: 8px;
+  }
+
+  .btn-submit {
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    float: right;
+    cursor: pointer;
+  }
+}
 /* End Contact Styles */
 
 /* About Styles */
@@ -231,3 +286,19 @@ nav {
   width: 100%;
 }
 /* End About Styles */
+
+/* Footer Styles */
+.footer {
+  background-color: #222;
+  padding: 6rem 0;
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .text {
+    color: var(--light-one);
+  }
+}
+/* End Footer Styles */

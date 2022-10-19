@@ -67,13 +67,14 @@
               <div class="project-content">
                 <div class="project-description">
                   <h4>Xbox One</h4>
-                  <p>
+                  <p class="text">
                     Collaborated with the Xbox Console Design team to help them
                     understand the product capabilities and limits. In addition
                     work along side the development team to create and implement
                     templates. Worked on multiple interations of the UI from the
                     launch of Xbox One to the console release of the Xbox One
                     S/X.
+                    <br />
                     <br />
                     Technology I use was XAML to build the UI and JSON to create
                     data.
@@ -93,13 +94,15 @@
               <div class="project-content">
                 <div class="project-description">
                   <h4>FAST</h4>
-                  <p>
+                  <p class="text">
                     This is an open source project. I helped contribute a few
                     components to this library using React and Web Component
                     technology. Internally within Microsoft I worked with
                     designers to build components, using the FAST framework. I
                     build and help iterate on components for Microsoft Edge,
-                    Edge Shopping and Microsoft News Feed. <br />
+                    Edge Shopping and Microsoft News Feed.
+                    <br />
+                    <br />
                     Technology I used was HTML, CSS, Typescript, Web Components.
                   </p>
                 </div>
@@ -123,7 +126,37 @@
           <div class="section-header">
             <h3 class="title">.Contact</h3>
           </div>
-          <div class="contact-body"></div>
+
+          <div class="contact-body">
+            <div class="contact-form grid-2">
+              <div class="column-left">
+                <div class="input-wrapper">
+                  <label>Name</label>
+                  <input type="text" title="name" class="contact-input" />
+                </div>
+                <div class="input-wrapper">
+                  <label>Subject</label>
+                  <input type="text" title="subject" class="contact-input" />
+                </div>
+                <div class="input-wrapper">
+                  <label>Email</label>
+                  <input type="email" title="email" class="contact-input" />
+                </div>
+              </div>
+
+              <div class="column-right">
+                <div class="input-wrapper">
+                  <label>Message</label>
+                  <textarea
+                    name="message"
+                    title="message"
+                    class="contact-input textarea"
+                  ></textarea>
+                </div>
+                <input href="#" type="submit" class="btn btn-submit" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -132,10 +165,48 @@
           <div class="section-header">
             <h3 class="title">.About</h3>
           </div>
-          <div class="about-body"></div>
+          <div class="about-body">
+            <p class="text">
+              Hello and welcome to a small space where I will share a little bit
+              more about myself. I reside in the great northwest in the the
+              state of Washington. My wife and I have two spoiled dogs that know
+              how to game the system to get anything they want. Lenny, the
+              Miniature Poodle who was rescued from South Korea. Milo, our not
+              so little Cavalier King Charles Spaniel puppy. This guy will eat
+              just about anything.
+            </p>
+            <p class="text">
+              For my career as a developer came fairly late in 2012. My
+              background is computer animation and after 12 years in the video
+              game industry I switched my career from creating 3D art to coding
+              UI. But even as an artist I have always had a love for some form
+              of coding, specifically HTML and CSS. From time to time I would
+              build website for family and friends. But it wasn’t until I found
+              myself leaving my heavily art focused world behind and working on
+              Windows Phone and then Xbox that I finally found the discipline as
+              a Design Developer, also known as, UX Engineer. Having the love
+              for design and implementing that vision in the product made sense
+              to me. It was a way that I could champion the work of our
+              designers and give it life inside our products. I consider myself
+              a self taught developer and learning as build one project at a
+              time. I have definitely been blessed and fortunate to work with
+              awesome developers on many of my projects.
+            </p>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="copyright">
+          <p class="text">
+            Copyright&copy;2022 All rights reserved | Made by
+            <span>Kham Udom</span>
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="./script/index.js"></script>
   </body>
 </html>
