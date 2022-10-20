@@ -11,11 +11,24 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("RuRZhD10TyG-ofQJ1");
+      })();
+    </script>
     <title>Kham Udom | UX Engineer</title>
   </head>
   <body>
     <main>
-      <header>
+      <header id="intro">
         <div class="bg-overlay"></div>
 
         <nav>
@@ -25,10 +38,10 @@
             </div>
             <div class="nav-links">
               <ul>
-                <li><a href="#" class="link active">intro</a></li>
-                <li><a href="#" class="link">projects</a></li>
-                <li><a href="#" class="link">contact</a></li>
-                <li><a href="#" class="link">about</a></li>
+                <li><a href="#intro" class="link active">intro</a></li>
+                <li><a href="#projects" class="link">projects</a></li>
+                <li><a href="#contact" class="link">contact</a></li>
+                <li><a href="#about" class="link">about</a></li>
                 <li><a href="#" class="btn">Connect</a></li>
               </ul>
             </div>
@@ -50,13 +63,13 @@
               <a href="#" class="btn">Download CV</a>
             </div>
             <div class="column-right">
-              <img src="./assets/img/me.png" alt="me" />
+              <img src="./assets/img/me04.jpg" alt="me" class="img-profile" />
             </div>
           </div>
         </div>
       </header>
 
-      <section class="projects section">
+      <section class="projects section" id="projects">
         <div class="container">
           <div class="section-header">
             <h3 class="title">.Projects</h3>
@@ -86,7 +99,12 @@
               </div>
               <div class="card-wrapper">
                 <div class="card">
-                  <div class="card-content">Xbox</div>
+                  <div class="card-content">
+                    <img
+                      src="./assets/img/portfolio/card-xbox.png"
+                      alt="xbox image"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,7 +131,12 @@
               </div>
               <div class="card-wrapper">
                 <div class="card">
-                  <div class="card-content">Fast</div>
+                  <div class="card-content">
+                    <img
+                      src="./assets/img/portfolio/card-fast.png"
+                      alt="fast image"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,7 +144,7 @@
         </div>
       </section>
 
-      <section class="contact section">
+      <section class="contact section" id="contact">
         <div class="container">
           <div class="section-header">
             <h3 class="title">.Contact</h3>
@@ -132,15 +155,32 @@
               <div class="column-left">
                 <div class="input-wrapper">
                   <label>Name</label>
-                  <input type="text" title="name" class="contact-input" />
+                  <input
+                    type="text"
+                    id="fullName"
+                    title="name"
+                    class="contact-input"
+                    required
+                  />
                 </div>
                 <div class="input-wrapper">
                   <label>Subject</label>
-                  <input type="text" title="subject" class="contact-input" />
+                  <input
+                    type="text"
+                    id="subject_id"
+                    title="subject"
+                    class="contact-input"
+                  />
                 </div>
                 <div class="input-wrapper">
                   <label>Email</label>
-                  <input type="email" title="email" class="contact-input" />
+                  <input
+                    type="email"
+                    id="email_id"
+                    title="email"
+                    class="contact-input"
+                    required
+                  />
                 </div>
               </div>
 
@@ -148,32 +188,41 @@
                 <div class="input-wrapper">
                   <label>Message</label>
                   <textarea
+                    id="message"
                     name="message"
                     title="message"
                     class="contact-input textarea"
                   ></textarea>
                 </div>
-                <input href="#" type="submit" class="btn btn-submit" />
+                <input
+                  href="#"
+                  type="submit"
+                  class="btn btn-submit"
+                  onclick="SendMail()"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="container">
           <div class="section-header">
             <h3 class="title">.About</h3>
           </div>
           <div class="about-body">
             <p class="text">
-              Hello and welcome to a small space where I will share a little bit
-              more about myself. I reside in the great northwest in the the
+              Hello! welcome to this small section where I will share a little
+              bit more about myself. I reside in the great northwest in the the
               state of Washington. My wife and I have two spoiled dogs that know
-              how to game the system to get anything they want. Lenny, the
-              Miniature Poodle who was rescued from South Korea. Milo, our not
-              so little Cavalier King Charles Spaniel puppy. This guy will eat
-              just about anything.
+              how to game the system to get anything they want.
+              <br />
+              <strong>Lenny</strong>, the Miniature Poodle who was rescued from
+              South Korea.
+              <br />
+              Milo, our not so little Cavalier King Charles Spaniel puppy. This
+              guy will eat just about anything.
             </p>
             <p class="text">
               For my career as a developer came fairly late in 2012. My
@@ -199,6 +248,11 @@
 
     <footer class="footer">
       <div class="container">
+        <div class="top-btn-wrapper">
+          <a href="#" class="top-btn">
+            <i class="fas fa-chevron-up"></i>
+          </a>
+        </div>
         <div class="copyright">
           <p class="text">
             Copyright&copy;2022 All rights reserved | Made by
