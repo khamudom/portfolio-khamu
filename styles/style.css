@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap");
 /* General Styles */
 *,
 *::before,
@@ -28,7 +29,8 @@ body,
 button,
 input,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -58,16 +60,21 @@ img {
   justify-content: center;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 .text {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
   color: var(--dark-one);
-  line-height: 1.6;
 }
 
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--accent-fill-rest);
+  background-color: var(--dark-one);
   color: var(--light-one);
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -85,9 +92,25 @@ img {
   text-align: left;
   margin-bottom: 1.5rem;
 }
-.section-header .title {
+.section-header .section-title {
+  font-family: "Source Code Pro", monospace;
   font-size: 3rem;
   font-weight: 400;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+.section-header .section-title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--dark-one);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* End General Styles */
@@ -101,10 +124,11 @@ header {
 
 nav {
   position: fixed;
-  background-color: #f6f7fb;
+  top: 0;
+  background-color: var(--light-three);
   width: 100%;
-  position: relative;
   z-index: 50;
+  transition: 0.3s;
 }
 nav .container {
   display: flex;
@@ -125,28 +149,20 @@ nav .logo {
   display: inline-block;
   padding: 0.9rem 1.2rem;
   color: var(--dark-one);
+  font-family: "Source Code Pro", monospace;
   font-size: 1.05rem;
   font-weight: 500;
   line-height: 1;
-  transition: 0.3s;
 }
 .nav-links a.active, .nav-links a:hover {
   color: var(--accent-fill-hover);
 }
-.nav-links a.btn {
-  font-size: 1rem;
-  background-color: var(--accent-fill-rest);
-  color: var(--light-one);
-  margin-left: 1rem;
-  padding: 0.5rem 1rem;
-}
-.nav-links a.btn:hover {
-  color: var(--light-one);
-  background-color: var(--accent-fill-hover);
+.nav-links .social-link {
+  font-size: 1.5rem;
 }
 
 .header-content .grid-2 {
-  grid-template-columns: 3.3fr 2.7fr;
+  grid-template-columns: 4fr 2fr;
   min-height: calc(100vh - 6rem);
   padding-bottom: 2.5rem;
   text-align: left;
@@ -160,6 +176,7 @@ nav .logo {
   margin-left: 2rem;
 }
 .header-content .header-title {
+  font-family: "Source Code Pro", monospace;
   font-size: 4rem;
   line-height: 0.8;
   font-weight: 400;
@@ -168,8 +185,10 @@ nav .logo {
   font-size: 2rem;
   line-height: 1.1;
   font-weight: 400;
+  margin-top: 1rem;
 }
 .header-content .text {
+  font-size: 1.25rem;
   margin: 1rem 0;
 }
 .header-content .img-profile {
@@ -242,7 +261,7 @@ nav .logo {
   height: 36px;
 }
 .contact-form .textarea {
-  height: 196px;
+  height: 204px;
   resize: none;
 }
 .contact-form .column-left {
@@ -264,12 +283,47 @@ nav .logo {
 
 /* End Contact Styles */
 /* About Styles */
-.about {
-  position: relative;
-  width: 100%;
+.about-body {
+  padding: 4rem 0;
 }
-.about .text {
+.about-body .text {
   margin-bottom: 1rem;
+}
+.about-body .about-me {
+  display: flex;
+}
+.about-body .about-me p span {
+  font-size: 32px;
+}
+.about-body .img-about {
+  width: 325px;
+  height: 444px;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+.about-body .dog-info {
+  display: flex;
+  margin-top: 1.25rem;
+}
+.about-body .dog-info .text {
+  width: 240px;
+}
+.about-body .dog-info .img-milo {
+  width: 246px;
+  height: 159px;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+.about-body .dog-info .img-lenny {
+  width: 183px;
+  height: 240px;
+  margin: 0 1rem;
+}
+.about-body .career-info {
+  margin-top: 2rem;
+}
+.about-body .career-info p span {
+  font-size: 32px;
 }
 
 /* End About Styles */
@@ -285,24 +339,24 @@ nav .logo {
   display: flex;
 }
 .footer .container .top-btn-wrapper {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+  width: 60px;
   background-color: var(--dark-one);
   position: absolute;
   top: -20px;
   left: 50%;
   border-radius: 50%;
   padding: 0.5rem;
-  transition: all 3s ease-in-out;
+  transition: 0.5s;
+}
+.footer .container .top-btn-wrapper:hover {
+  top: -23px;
 }
 .footer .container .top-btn-wrapper i {
   font-size: 2rem;
   transform: translateY(-4px);
   color: var(--light-one);
-}
-.footer .container .top-btn-wrapper i:hover {
-  color: var(--accent-fill-hover);
 }
 
 .copyright {

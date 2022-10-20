@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap");
 
 /* General Styles */
 *,
@@ -31,7 +32,8 @@ body,
 button,
 input,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -61,16 +63,21 @@ img {
   justify-content: center;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 .text {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
   color: var(--dark-one);
-  line-height: 1.6;
 }
 
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--accent-fill-rest);
+  background-color: var(--dark-one);
   color: var(--light-one);
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -89,9 +96,24 @@ img {
   text-align: left;
   margin-bottom: 1.5rem;
 
-  .title {
+  .section-title {
+    font-family: "Source Code Pro", monospace;
     font-size: 3rem;
     font-weight: 400;
+    width: max-content;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: var(--dark-one);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 /* End General Styles */
@@ -106,10 +128,11 @@ header {
 
 nav {
   position: fixed;
-  background-color: #f6f7fb;
+  top: 0;
+  background-color: var(--light-three);
   width: 100%;
-  position: relative;
   z-index: 50;
+  transition: 0.3s;
 
   .container {
     display: flex;
@@ -134,34 +157,26 @@ nav {
     display: inline-block;
     padding: 0.9rem 1.2rem;
     color: var(--dark-one);
+    font-family: "Source Code Pro", monospace;
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1;
-    transition: 0.3s;
+    // transition: 0.3s;
 
     &.active,
     &:hover {
       color: var(--accent-fill-hover);
     }
+  }
 
-    &.btn {
-      font-size: 1rem;
-      background-color: var(--accent-fill-rest);
-      color: var(--light-one);
-      margin-left: 1rem;
-      padding: 0.5rem 1rem;
-
-      &:hover {
-        color: var(--light-one);
-        background-color: var(--accent-fill-hover);
-      }
-    }
+  .social-link {
+    font-size: 1.5rem;
   }
 }
 
 .header-content {
   .grid-2 {
-    grid-template-columns: 3.3fr 2.7fr;
+    grid-template-columns: 4fr 2fr;
     min-height: calc(100vh - 6rem);
     padding-bottom: 2.5rem;
     text-align: left;
@@ -178,6 +193,7 @@ nav {
   }
 
   .header-title {
+    font-family: "Source Code Pro", monospace;
     font-size: 4rem;
     line-height: 0.8;
     font-weight: 400;
@@ -187,9 +203,11 @@ nav {
     font-size: 2rem;
     line-height: 1.1;
     font-weight: 400;
+    margin-top: 1rem;
   }
 
   .text {
+    font-size: 1.25rem;
     margin: 1rem 0;
   }
 
@@ -271,7 +289,7 @@ nav {
   }
 
   .textarea {
-    height: 196px;
+    height: 204px;
     resize: none;
   }
 
@@ -297,14 +315,57 @@ nav {
 /* End Contact Styles */
 
 /* About Styles */
-.about {
-  position: relative;
-  width: 100%;
+.about-body {
+  padding: 4rem 0;
 
   .text {
     margin-bottom: 1rem;
   }
+
+  .about-me {
+    display: flex;
+
+    p span {
+      font-size: 32px;
+    }
+  }
+
+  .img-about {
+    width: 325px;
+    height: 444px;
+    margin-inline-end: 1rem;
+  }
+
+  .dog-info {
+    display: flex;
+    margin-top: 1.25rem;
+
+    .text {
+      width: 240px;
+    }
+
+    .img-milo {
+      width: 246px;
+      height: 159px;
+      margin-inline-end: 1rem;
+    }
+
+    .img-lenny {
+      width: 183px;
+      height: 240px;
+      margin: 0 1rem;
+    }
+  }
+
+  .career-info {
+    margin-top: 2rem;
+
+    p span {
+      font-size: 32px;
+    }
+  }
 }
+
 /* End About Styles */
 
 /* Footer Styles */
@@ -319,23 +380,25 @@ nav {
     display: flex;
 
     .top-btn-wrapper {
-      width: fit-content;
+      display: flex;
+      justify-content: center;
+      width: 60px;
       background-color: var(--dark-one);
       position: absolute;
       top: -20px;
       left: 50%;
       border-radius: 50%;
       padding: 0.5rem;
-      transition: all 3s ease-in-out;
+      transition: 0.5s;
+
+      &:hover {
+        top: -23px;
+      }
 
       i {
         font-size: 2rem;
         transform: translateY(-4px);
         color: var(--light-one);
-
-        &:hover {
-          color: var(--accent-fill-hover);
-        }
       }
     }
   }

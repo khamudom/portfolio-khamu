@@ -8,12 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <script
       type="text/javascript"
@@ -28,21 +35,37 @@
   </head>
   <body>
     <main>
-      <header id="intro">
+      <header class="block" id="intro">
         <div class="bg-overlay"></div>
 
-        <nav>
+        <nav id="navbar">
           <div class="container">
             <div class="logo">
               <img src="./assets/img/ku_logo.svg" alt="logo" />
             </div>
             <div class="nav-links">
               <ul>
-                <li><a href="#intro" class="link active">intro</a></li>
-                <li><a href="#projects" class="link">projects</a></li>
-                <li><a href="#contact" class="link">contact</a></li>
-                <li><a href="#about" class="link">about</a></li>
-                <li><a href="#" class="btn">Connect</a></li>
+                <li><a href="#intro" class="link intro active">intro</a></li>
+                <li><a href="#projects" class="link projects">projects</a></li>
+                <li><a href="#contact" class="link contact">contact</a></li>
+                <li><a href="#about" class="link about">about</a></li>
+                <li>
+                  <a
+                    href="https://github.com/khamudom"
+                    target="_blank"
+                    class="social-link"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/khamudom/"
+                    target="_blank"
+                    class="social-link"
+                  >
+                    <i class="fas fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -52,15 +75,17 @@
           <div class="container grid-2">
             <div class="column-left">
               <h1 class="header-title">Welcome</h1>
-              <h2 class="text header-subtitle">
+              <h2 class="header-subtitle">
                 I am Kham, a design-minded front-end engineer
               </h2>
               <p class="text">
                 I focus on creating fully accessible user interface and
                 experience, from prototyping to production.
               </p>
-              <a href="#" class="btn">More about me</a>
-              <a href="#" class="btn">Download CV</a>
+              <a href="#about" class="btn">More about me</a>
+              <a href="./assets/khamu-resume.pdf" class="btn" download
+                >Download CV</a
+              >
             </div>
             <div class="column-right">
               <img src="./assets/img/me04.jpg" alt="me" class="img-profile" />
@@ -69,17 +94,17 @@
         </div>
       </header>
 
-      <section class="projects section" id="projects">
+      <section class="projects section block" id="projects">
         <div class="container">
           <div class="section-header">
-            <h3 class="title">.Projects</h3>
+            <h3 class="section-title">Projects/></h3>
           </div>
 
           <div class="projects-body">
             <div class="project grid-2">
               <div class="project-content">
                 <div class="project-description">
-                  <h4>Xbox One</h4>
+                  <h4 class="title">Xbox One</h4>
                   <p class="text">
                     Collaborated with the Xbox Console Design team to help them
                     understand the product capabilities and limits. In addition
@@ -93,9 +118,6 @@
                     data.
                   </p>
                 </div>
-                <span>
-                  <a href="" class="btn small">Read more</a>
-                </span>
               </div>
               <div class="card-wrapper">
                 <div class="card">
@@ -111,22 +133,33 @@
             <div class="project grid-2">
               <div class="project-content">
                 <div class="project-description">
-                  <h4>FAST</h4>
+                  <h4 class="title">FAST</h4>
                   <p class="text">
-                    This is an open source project. I helped contribute a few
-                    components to this library using React and Web Component
-                    technology. Internally within Microsoft I worked with
-                    designers to build components, using the FAST framework. I
-                    build and help iterate on components for Microsoft Edge,
-                    Edge Shopping and Microsoft News Feed.
+                    FAST is a layered framework built on native browser web
+                    component APIs. This is an open source project. I helped
+                    contribute a few components to this library using React and
+                    Web Component technology. Internally within Microsoft I
+                    worked with designers to build components, using the FAST
+                    framework. I build and help iterate on components for
+                    Microsoft Edge, Edge Shopping and Microsoft News Feed.
                     <br />
                     <br />
                     Technology I used was HTML, CSS, Typescript, Web Components.
                   </p>
                 </div>
                 <span>
-                  <a href="" class="btn small">Website</a>
-                  <a href="" class="btn small">GitHub</a>
+                  <a
+                    href="https://www.fast.design/"
+                    target="_blank"
+                    class="btn small"
+                    >Website</a
+                  >
+                  <a
+                    href="https://github.com/microsoft/fast/"
+                    target="_blank"
+                    class="btn small"
+                    >GitHub</a
+                  >
                 </span>
               </div>
               <div class="card-wrapper">
@@ -140,14 +173,48 @@
                 </div>
               </div>
             </div>
+            <div class="project grid-2">
+              <div class="project-content">
+                <div class="project-description">
+                  <h4 class="title">Fluent UI</h4>
+                  <p class="text">
+                    I contributed to styling and maintaining the Fluent UI web
+                    component open source library. The biggest contribution and
+                    an ongoing process is making sure the components are
+                    accessible, specifically high contrast.
+                    <br />
+                    <br />
+                    Technology I used was HTML, CSS, Typescript, Web Components.
+                  </p>
+                </div>
+                <span>
+                  <a
+                    href="https://developer.microsoft.com/en-us/fluentui#/"
+                    target="_blank"
+                    class="btn small"
+                    >Website</a
+                  >
+                </span>
+              </div>
+              <div class="card-wrapper">
+                <div class="card">
+                  <div class="card-content">
+                    <img
+                      src="./assets/img/portfolio/card-fluent.png"
+                      alt="fast image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="contact section" id="contact">
+      <section class="contact section block" id="contact">
         <div class="container">
           <div class="section-header">
-            <h3 class="title">.Contact</h3>
+            <h3 class="section-title">Contact/></h3>
           </div>
 
           <div class="contact-body">
@@ -164,15 +231,6 @@
                   />
                 </div>
                 <div class="input-wrapper">
-                  <label>Subject</label>
-                  <input
-                    type="text"
-                    id="subject_id"
-                    title="subject"
-                    class="contact-input"
-                  />
-                </div>
-                <div class="input-wrapper">
                   <label>Email</label>
                   <input
                     type="email"
@@ -180,6 +238,15 @@
                     title="email"
                     class="contact-input"
                     required
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label>Subject</label>
+                  <input
+                    type="text"
+                    id="subject_id"
+                    title="subject"
+                    class="contact-input"
                   />
                 </div>
               </div>
@@ -206,41 +273,77 @@
         </div>
       </section>
 
-      <section class="about section" id="about">
+      <section class="about section block" id="about">
         <div class="container">
           <div class="section-header">
-            <h3 class="title">.About</h3>
+            <h3 class="section-title">About/></h3>
           </div>
           <div class="about-body">
-            <p class="text">
-              Hello! welcome to this small section where I will share a little
-              bit more about myself. I reside in the great northwest in the the
-              state of Washington. My wife and I have two spoiled dogs that know
-              how to game the system to get anything they want.
-              <br />
-              <strong>Lenny</strong>, the Miniature Poodle who was rescued from
-              South Korea.
-              <br />
-              Milo, our not so little Cavalier King Charles Spaniel puppy. This
-              guy will eat just about anything.
-            </p>
-            <p class="text">
-              For my career as a developer came fairly late in 2012. My
-              background is computer animation and after 12 years in the video
-              game industry I switched my career from creating 3D art to coding
-              UI. But even as an artist I have always had a love for some form
-              of coding, specifically HTML and CSS. From time to time I would
-              build website for family and friends. But it wasn’t until I found
-              myself leaving my heavily art focused world behind and working on
-              Windows Phone and then Xbox that I finally found the discipline as
-              a Design Developer, also known as, UX Engineer. Having the love
-              for design and implementing that vision in the product made sense
-              to me. It was a way that I could champion the work of our
-              designers and give it life inside our products. I consider myself
-              a self taught developer and learning as build one project at a
-              time. I have definitely been blessed and fortunate to work with
-              awesome developers on many of my projects.
-            </p>
+            <div class="about-me">
+              <img
+                src="./assets/img/lenny-me.png"
+                alt="lenny and me"
+                class="img-about"
+              />
+              <div class="personal-info">
+                <p class="text">
+                  <span>Welcome</span> to a small section where I will share a
+                  little bit more about myself. I reside in the great northwest,
+                  in the the state of Washington.
+                  <br />
+                  <br />
+                  My wife and I have two spoiled dogs that know how to game the
+                  system to get anything they want.
+                </p>
+                <div class="dog-info">
+                  <img
+                    src="./assets/img/milo.png"
+                    alt="milo"
+                    class="img-milo"
+                  />
+                  <p class="text">
+                    <strong>Milo</strong><br />
+                    Our not so little Cavalier King Charles Spaniel puppy. This
+                    pup will eat just about anything.
+                  </p>
+                  <img
+                    src="./assets/img/lenny.png"
+                    alt="lenny"
+                    class="img-lenny"
+                  />
+                  <p class="text">
+                    <strong>Lenny,</strong><br />
+                    Our Miniature Poodle who was rescued from South Korea.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="career-info">
+              <p class="text">
+                <span>My developer</span> career came fairly late in life, of
+                2012. My background is computer animation and after 12 years in
+                the video game industry I switched my career from creating 3D
+                art to coding UI and UX. But even working as an artist I have
+                always had a love for some form of coding, specifically HTML and
+                CSS. From time to time I would build website for family and
+                friends.
+                <br />
+                <br />
+                But it wasn&#39;t until after I left my heavily art focused
+                world behind and started working on Windows Phone and then Xbox,
+                that I finally found the discipline as a UX Engineer. Focusing
+                on design and implementing that vision in the product made sense
+                to me. It was a way that I could champion the work of the design
+                to bring that vision to life inside the product.
+                <br />
+                <br />
+                I consider myself a self taught developer and learning as I
+                build one project at a time. I have definitely been blessed and
+                fortunate to work and learn with awesome developers on all of my
+                projects. One thing I learn as developer is you never stop
+                learning.
+              </p>
+            </div>
           </div>
         </div>
       </section>

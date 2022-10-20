@@ -1,14 +1,49 @@
+const sectionBlocks = document.querySelectorAll(".block");
 const navLinks = document.querySelectorAll(".link");
 
+// hide and show navigation bar
+var lastScrollTop = 0;
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", function () {
+  var scrollTop =
+    this.window.scrollY || this.document.documentElement.lastScrollTop;
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = "-96px";
+  } else {
+    navbar.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
+});
+
+// change active states between navigation itemw when scrolling
+window.addEventListener("scroll", function () {
+  var current = "";
+
+  sectionBlocks.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY > sectionTop - sectionHeight / 2) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+});
+
+// change active state between navigation items on click
 navLinks.forEach((link) =>
   link.addEventListener("click", () => {
-    // remove the active class first
     navLinks.forEach((button) => button.classList.remove("active"));
-    // add the active class to the button you clicked
     link.classList.add("active");
   })
 );
 
+// send user info and message using email js
 function SendMail() {
   var params = {
     from_name: document.getElementById("fullName").value,
