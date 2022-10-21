@@ -1,5 +1,6 @@
 const sectionBlocks = document.querySelectorAll(".block");
 const navLinks = document.querySelectorAll(".link");
+const chk = document.getElementById("chk");
 
 // hide and show navigation bar
 var lastScrollTop = 0;
@@ -57,3 +58,8 @@ function SendMail() {
       alert("Message sent successfully!");
     });
 }
+
+// adding dark class on body to toggle light and dark theme
+chk.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});

@@ -33,6 +33,24 @@ textarea {
   font-weight: 400;
 }
 
+body {
+  --background-color: var(--light-three);
+  --background-color-secondary: var(--dark-two);
+  --neutral-foreground: var(--dark-one);
+  --neutral-foreground-btn: var(--light-one);
+  --neutral-fill: var(--dark-one);
+  color: var(--dark-one);
+}
+
+body.dark {
+  --background-color: var(--dark-two);
+  --background-color-secondary: var(--light-three);
+  --neutral-foreground: var(--light-one);
+  --neutral-foreground-btn: var(--dark-one);
+  --neutral-fill: var(--light-one);
+  color: var(--light-one);
+}
+
 a {
   text-decoration: none;
 }
@@ -68,14 +86,14 @@ img {
 .text {
   font-size: 1.0625rem;
   font-weight: 400;
-  color: var(--dark-one);
+  color: var(--neutral-foreground);
 }
 
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--dark-one);
-  color: var(--light-one);
+  background-color: var(--neutral-fill);
+  color: var(--neutral-foreground-btn);
   border-radius: 0.25rem;
   font-size: 1rem;
 }
@@ -85,7 +103,7 @@ img {
 
 .section {
   padding: 6rem 0;
-  background-color: var(--light-three);
+  background-color: var(--background-color);
 }
 
 .section-header {
@@ -107,7 +125,7 @@ img {
   width: 100%;
   height: 3px;
   border-radius: 3px;
-  background-color: var(--dark-one);
+  background-color: var(--neutral-foreground);
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -117,7 +135,7 @@ img {
 /* Header Styles */
 header {
   width: 100%;
-  background-color: var(--light-three);
+  background-color: var(--background-color);
   overflow: hidden;
   position: relative;
 }
@@ -125,7 +143,7 @@ header {
 nav {
   position: fixed;
   top: 0;
-  background-color: var(--light-three);
+  background-color: var(--background-color);
   width: 100%;
   z-index: 50;
   transition: 0.3s;
@@ -148,7 +166,7 @@ nav .logo {
 .nav-links a {
   display: inline-block;
   padding: 0.9rem 1.2rem;
-  color: var(--dark-one);
+  color: var(--neutral-foreground);
   font-family: "Source Code Pro", monospace;
   font-size: 1.05rem;
   font-weight: 500;
@@ -159,6 +177,46 @@ nav .logo {
 }
 .nav-links .social-link {
   font-size: 1.5rem;
+}
+.nav-links .theme-toggle {
+  align-self: center;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+.nav-links .theme-toggle .label {
+  background-color: var(--neutral-fill);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  height: 26px;
+  width: 50px;
+  position: relative;
+  padding: 5px;
+}
+.nav-links .theme-toggle .indicator {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  border: 2px solid var(--neutral-fill);
+  transition: 0.2s;
+}
+.nav-links .theme-toggle .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.nav-links .theme-toggle .checkbox:checked + .label .indicator {
+  transform: translateX(24px);
+}
+.nav-links .theme-toggle .fa-moon {
+  color: var(--dark-one);
+}
+.nav-links .theme-toggle .fa-sun {
+  color: var(--light-one);
 }
 
 .header-content .grid-2 {
@@ -221,7 +279,7 @@ nav .logo {
   position: relative;
   width: 640px;
   height: 300px;
-  background-color: var(--light-one);
+  background-color: var(--neutral-fill);
   overflow: hidden;
   box-shadow: 0 0 2px black;
 }
@@ -330,7 +388,7 @@ nav .logo {
 /* Footer Styles */
 .footer {
   position: relative;
-  background-color: var(--dark-one);
+  background-color: var(--background-color-secondary);
   height: 300px;
 }
 .footer .container {
@@ -342,7 +400,7 @@ nav .logo {
   display: flex;
   justify-content: center;
   width: 60px;
-  background-color: var(--dark-one);
+  background-color: var(--background-color-secondary);
   position: absolute;
   top: -20px;
   left: 50%;
@@ -356,7 +414,7 @@ nav .logo {
 .footer .container .top-btn-wrapper i {
   font-size: 2rem;
   transform: translateY(-4px);
-  color: var(--light-one);
+  color: var(--neutral-foreground-btn);
 }
 
 .copyright {
@@ -367,7 +425,7 @@ nav .logo {
   padding-bottom: 30px;
 }
 .copyright .text {
-  color: var(--light-one);
+  color: var(--neutral-foreground-btn);
 }
 
 /* End Footer Styles *//*# sourceMappingURL=style.css.map */
