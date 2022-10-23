@@ -28,6 +28,26 @@ html {
   --accent-fill-hover: #2c87ef;
 }
 
+/* Light Theme Color */
+.light {
+  --main-background: var(--light-two);
+  --main-background-inverse: var(--dark-two);
+  --main-font: var(--dark-two);
+  --main-font-inverse: var(--light-two);
+  --btn-background-primary: var(--dark-one);
+  --btn-font-primary: var(--light-one);
+}
+
+/* Dark Theme Color */
+.dark {
+  --main-background: var(--dark-two);
+  --main-background-inverse: var(--light-two);
+  --main-font: var(--light-two);
+  --main-font-inverse: var(--dark-two);
+  --btn-background-primary: var(--light-one);
+  --btn-font-primary: var(--dark-one);
+}
+
 body,
 button,
 input,
@@ -36,23 +56,9 @@ textarea {
   font-weight: 400;
 }
 
-// TODO: Find better names for these light and dark theme variables
 body {
-  --background-color: var(--light-three);
-  --background-color-secondary: var(--dark-two);
-  --neutral-foreground: var(--dark-one);
-  --neutral-foreground-btn: var(--light-one);
-  --neutral-fill: var(--dark-one);
-  color: var(--dark-one);
-}
-
-body.dark {
-  --background-color: var(--dark-two);
-  --background-color-secondary: var(--light-three);
-  --neutral-foreground: var(--light-one);
-  --neutral-foreground-btn: var(--dark-one);
-  --neutral-fill: var(--light-one);
-  color: var(--light-one);
+  background: var(--main-background);
+  color: var(--main-font);
 }
 
 a {
@@ -90,14 +96,13 @@ img {
 .text {
   font-size: 1.0625rem;
   font-weight: 400;
-  color: var(--neutral-foreground);
 }
 
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--neutral-fill);
-  color: var(--neutral-foreground-btn);
+  background-color: var(--btn-background-primary);
+  color: var(--btn-font-primary);
   border-radius: 0.25rem;
   font-size: 1rem;
 
@@ -108,7 +113,6 @@ img {
 
 .section {
   padding: 6rem 0;
-  background-color: var(--background-color);
 }
 
 .section-header {
@@ -128,7 +132,7 @@ img {
       width: 100%;
       height: 3px;
       border-radius: 3px;
-      background-color: var(--neutral-foreground);
+      background-color: var(--main-font);
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -140,7 +144,6 @@ img {
 /* Header Styles */
 header {
   width: 100%;
-  background-color: var(--background-color);
   overflow: hidden;
   position: relative;
 }
@@ -148,7 +151,7 @@ header {
 nav {
   position: fixed;
   top: 0;
-  background-color: var(--background-color);
+  background-color: var(--main-background);
   width: 100%;
   z-index: 50;
   transition: 0.3s;
@@ -175,7 +178,7 @@ nav {
   a {
     display: inline-block;
     padding: 0.9rem 1.2rem;
-    color: var(--neutral-foreground);
+    color: var(--main-font);
     font-family: "Source Code Pro", monospace;
     font-size: 1.05rem;
     font-weight: 500;
@@ -193,48 +196,77 @@ nav {
   }
 
   .theme-toggle {
-    align-self: center;
     margin-inline-start: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    .label {
-      background-color: var(--neutral-fill);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-radius: 50px;
+    .switch {
+      position: relative;
+      display: inline-block;
       height: 26px;
       width: 50px;
-      position: relative;
-      padding: 5px;
-    }
 
-    .indicator {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 22px;
-      height: 22px;
-      background-color: var(--background-color);
-      border-radius: 50%;
-      border: 2px solid var(--neutral-fill);
-      transition: 0.2s;
-    }
+      input {
+        opacity: 0;
 
-    .checkbox {
-      opacity: 0;
-      position: absolute;
+        &:checked + .track {
+          background: var(--main-background-inverse);
+        }
 
-      &:checked + .label .indicator {
-        transform: translateX(24px);
+        &:checked + .track:before {
+          transform: translateX(-24px);
+        }
+
+        &s:checked + .indicator::before {
+          background-color: var(--main-font-inverse);
+        }
       }
-    }
 
-    .fa-moon {
-      color: var(--dark-one);
-    }
+      .track {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--main-background-inverse);
+        transition: 0.4s;
+      }
 
-    .fa-sun {
-      color: var(--light-one);
+      .track:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 24px;
+        bottom: 0px;
+        background-color: var(--main-background);
+        border: 2px solid var(--main-background-inverse);
+        transition: 0.4s;
+      }
+
+      .track,
+      .indicator {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.5rem;
+        border-radius: 50px;
+
+        .fa-moon {
+          color: var(--main-font-inverse);
+        }
+
+        .fa-sun {
+          color: var(--main-font-inverse);
+        }
+      }
+
+      .indicator::before {
+        border-radius: 50%;
+      }
     }
   }
 }
@@ -242,7 +274,7 @@ nav {
 .header-content {
   .grid-2 {
     grid-template-columns: 4fr 2fr;
-    min-height: calc(100vh - 6rem);
+    min-height: 100vh;
     padding-bottom: 2.5rem;
     text-align: left;
   }
@@ -308,7 +340,7 @@ nav {
     position: relative;
     width: 640px;
     height: 300px;
-    background-color: var(--neutral-fill);
+    background-color: var(--main-background);
     overflow: hidden;
     box-shadow: 0 0 2px black;
 
@@ -436,7 +468,7 @@ nav {
 /* Footer Styles */
 .footer {
   position: relative;
-  background-color: var(--background-color-secondary);
+  background-color: var(--main-background-inverse);
   height: 300px;
 
   .container {
@@ -448,7 +480,7 @@ nav {
       display: flex;
       justify-content: center;
       width: 60px;
-      background-color: var(--background-color-secondary);
+      background-color: var(--main-background-inverse);
       position: absolute;
       top: -20px;
       left: 50%;
@@ -463,7 +495,7 @@ nav {
       i {
         font-size: 2rem;
         transform: translateY(-4px);
-        color: var(--neutral-foreground-btn);
+        color: var(--main-font-inverse);
       }
     }
   }
@@ -476,7 +508,7 @@ nav {
   align-self: flex-end;
   padding-bottom: 30px;
   .text {
-    color: var(--neutral-foreground-btn);
+    color: var(--main-font-inverse);
   }
 }
 /* End Footer Styles */

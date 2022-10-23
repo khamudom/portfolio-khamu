@@ -1,7 +1,3 @@
-const sectionBlocks = document.querySelectorAll(".block");
-const navLinks = document.querySelectorAll(".link");
-const chk = document.getElementById("chk");
-
 // hide and show navigation bar
 var lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
@@ -17,6 +13,9 @@ window.addEventListener("scroll", function () {
 });
 
 // change active states between navigation itemw when scrolling
+const sectionBlocks = document.querySelectorAll(".block");
+const navLinks = document.querySelectorAll(".link");
+
 window.addEventListener("scroll", function () {
   var current = "";
 
@@ -59,7 +58,31 @@ function SendMail() {
     });
 }
 
-// adding dark class on body to toggle light and dark theme
-chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
-});
+// toggle light and dark theme and add to local storage
+const themeSwitch = document.getElementById("theme-switch");
+
+themeSwitch.checked = false;
+function clickThemeHandler() {
+  if (this.checked) {
+    document.body.classList.remove("light");
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.body.classList.add("light");
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  }
+}
+themeSwitch.addEventListener("click", clickThemeHandler);
+
+window.onload = checkTheme();
+
+function checkTheme() {
+  const localStorageTheme = localStorage.getItem("theme");
+  if (localStorageTheme !== null && localStorageTheme === "dark") {
+    document.body.className = localStorageTheme;
+
+    const themeSwitch = document.getElementById("theme-switch");
+    themeSwitch.checked = true;
+  }
+}

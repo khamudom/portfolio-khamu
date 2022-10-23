@@ -33,7 +33,7 @@
     </script>
     <title>Kham Udom | UX Engineer</title>
   </head>
-  <body>
+  <body class="light">
     <main>
       <header class="block" id="intro">
         <nav id="navbar">
@@ -66,11 +66,16 @@
                 </li>
                 <li>
                   <div class="theme-toggle">
-                    <input type="checkbox" id="chk" class="checkbox" />
-                    <label for="chk" class="label">
-                      <i class="fas fa-thin fa-moon"></i>
-                      <i class="fa-solid fa-sun"></i>
-                      <div class="indicator"></div>
+                    <label class="switch">
+                      <input
+                        type="checkbox"
+                        title="checkbox"
+                        id="theme-switch"
+                      />
+                      <span class="track indicator">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fas fa-thin fa-moon"></i>
+                      </span>
                     </label>
                   </div>
                 </li>
