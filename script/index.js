@@ -12,7 +12,7 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
-// change active states between navigation itemw when scrolling
+// change active states between navigation item when scrolling
 const sectionBlocks = document.querySelectorAll(".block");
 const navLinks = document.querySelectorAll(".link");
 

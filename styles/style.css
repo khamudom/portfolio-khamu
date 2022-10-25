@@ -136,6 +136,12 @@ img {
   transform: translateX(-50%);
 }
 
+.btn-container {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+
 /* End General Styles */
 /* Header Styles */
 header {
@@ -290,7 +296,7 @@ nav .logo {
 .projects-body {
   display: flex;
   flex-direction: column;
-  row-gap: 100px;
+  row-gap: 6.25rem;
   width: 100%;
   padding: 4rem 0;
 }
@@ -355,7 +361,7 @@ nav .logo {
 .contact-form .column-left {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 1.25rem;
   margin-right: 8px;
 }
 .contact-form .column-right {
@@ -372,6 +378,7 @@ nav .logo {
 /* End Contact Styles */
 /* About Styles */
 .about-body {
+  position: relative;
   padding: 4rem 0;
 }
 .about-body .text {
@@ -392,6 +399,10 @@ nav .logo {
 .about-body .dog-info {
   display: flex;
   margin-top: 1.25rem;
+}
+.about-body .dog-info .grid-2 {
+  grid-template-columns: repeat(2, auto);
+  align-items: flex-start;
 }
 .about-body .dog-info .text {
   width: 240px;
@@ -458,4 +469,164 @@ nav .logo {
   color: var(--main-font-inverse);
 }
 
-/* End Footer Styles *//*# sourceMappingURL=style.css.map */
+/* End Footer Styles */
+@media screen and (max-width: 1330px) {
+  .projects-body .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .projects-body .grid-2 {
+    grid-template-columns: unset;
+  }
+  .projects-body .grid-2 .project-content {
+    order: 2;
+    position: relative;
+    margin-top: 2rem;
+  }
+  .projects-body .grid-2 .card-wrapper {
+    order: 1;
+    justify-content: center;
+  }
+  .about-body .dog-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-body .dog-info .text {
+    width: 100%;
+  }
+  .about-body .dog-info .d2 {
+    margin-top: 1rem;
+  }
+  .about-body .dog-info .d2 .img-lenny {
+    margin: 0 1rem 0 0;
+  }
+}
+@media screen and (max-width: 950px) {
+  .section {
+    padding: 0 0 6rem 0;
+  }
+  .header-content .grid-2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 0;
+    grid-template-columns: unset;
+  }
+  .header-content .column-left {
+    order: 2;
+  }
+  .header-content .header-title {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+  .about-body .about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-body .about-me .img-about {
+    width: 200px;
+    height: 273px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .contact-body .grid-2 {
+    display: flex;
+  }
+  .contact-body .contact-form .column-left,
+.contact-body .contact-form .column-right {
+    width: 100%;
+  }
+  .contact-body .contact-form .contact-input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .text {
+    font-size: 0.8125rem;
+  }
+  .container {
+    padding: 0 1.25rem;
+  }
+  .section-header {
+    display: flex;
+    justify-content: center;
+  }
+  .section-header .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .nav-links {
+    display: none;
+  }
+  .header-content .column-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header-content .column-left .header-title {
+    font-size: 2rem;
+  }
+  .header-content .column-left .header-subtitle {
+    font-size: 1.25rem;
+  }
+  .header-content .column-left .text {
+    font-size: 1rem;
+  }
+  .header-content .column-right {
+    margin-left: 0;
+  }
+  .header-content .column-right .img-profile {
+    height: 160px;
+  }
+  .projects-body .title {
+    font-size: 1.5rem;
+  }
+  .projects-body .card-wrapper .card {
+    width: 100%;
+    height: initial;
+  }
+  .contact-body .grid-2 {
+    flex-direction: column;
+  }
+  .contact-body .grid-2 .column-right {
+    margin-left: 0;
+    margin-top: 1.25rem;
+  }
+  .about.section {
+    padding-bottom: 0;
+  }
+  .about-body .img-about {
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+  }
+  .about-body .about-me p span {
+    font-size: 1.5rem;
+  }
+  .about-body .dog-info .grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-body .career-info {
+    margin-top: 1rem;
+  }
+  .about-body .career-info p span {
+    font-size: 1.5rem;
+  }
+  .footer .container .top-btn-wrapper {
+    left: 40%;
+  }
+  .footer .container .top-btn-wrapper:hover {
+    top: -20px;
+  }
+  .footer .container .top-btn-wrapper i {
+    font-size: 1.25rem;
+  }
+  .footer .copyright {
+    text-align: center;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

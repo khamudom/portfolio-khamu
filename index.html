@@ -33,7 +33,7 @@
     </script>
     <title>Kham Udom | UX Engineer</title>
   </head>
-  <body class="light">
+  <body class="dark">
     <main>
       <header class="block" id="intro">
         <nav id="navbar">
@@ -83,7 +83,6 @@
             </div>
           </div>
         </nav>
-
         <div class="header-content">
           <div class="container grid-2">
             <div class="column-left">
@@ -95,10 +94,12 @@
                 I focus on creating fully accessible user interface and
                 experience, from prototyping to production.
               </p>
-              <a href="#about" class="btn">More about me</a>
-              <a href="./assets/khamu-resume.pdf" class="btn" download
-                >Download CV</a
-              >
+              <span class="btn-container">
+                <a href="#about" class="btn">About me</a>
+                <a href="./assets/khamu-resume.pdf" class="btn" download
+                  >Download CV</a
+                >
+              </span>
             </div>
             <div class="column-right">
               <img src="./assets/img/me04.jpg" alt="me" class="img-profile" />
@@ -110,112 +111,119 @@
       <section class="projects section block" id="projects">
         <div class="container">
           <div class="section-header">
-            <h3 class="section-title">Projects/></h3>
+            <h3 class="section-title">.Projects</h3>
           </div>
-
           <div class="projects-body">
-            <div class="project grid-2">
-              <div class="project-content">
-                <div class="project-description">
-                  <h4 class="title">Xbox One</h4>
-                  <p class="text">
-                    Collaborated with the Xbox Console Design team to help them
-                    understand the product capabilities and limits. In addition
-                    work along side the development team to create and implement
-                    templates. Worked on multiple interations of the UI from the
-                    launch of Xbox One to the console release of the Xbox One
-                    S/X.
-                    <br />
-                    <br />
-                    Technology I use was XAML to build the UI and JSON to create
-                    data.
-                  </p>
+            <div class="project">
+              <h4 class="title">Xbox One</h4>
+              <div class="grid-2">
+                <div class="project-content">
+                  <div class="project-description">
+                    <p class="text">
+                      Collaborated with the Xbox Console Design team to help
+                      them understand the product capabilities and limits. In
+                      addition work along side the development team to create
+                      and implement templates. Worked on multiple interations of
+                      the UI from the launch of Xbox One to the console release
+                      of the Xbox One S/X.
+                      <br />
+                      <br />
+                      Technology I use was XAML to build the UI and JSON to
+                      create data.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="card-wrapper">
-                <div class="card">
-                  <div class="card-content">
-                    <img
-                      src="./assets/img/portfolio/card-xbox.png"
-                      alt="xbox image"
-                    />
+                <div class="card-wrapper">
+                  <div class="card">
+                    <div class="card-content">
+                      <img
+                        src="./assets/img/portfolio/card-xbox.png"
+                        alt="xbox image"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="project grid-2">
-              <div class="project-content">
-                <div class="project-description">
-                  <h4 class="title">FAST</h4>
-                  <p class="text">
-                    FAST is a layered framework built on native browser web
-                    component APIs. This is an open source project. I helped
-                    contribute a few components to this library using React and
-                    Web Component technology. Internally within Microsoft I
-                    worked with designers to build components, using the FAST
-                    framework. I build and help iterate on components for
-                    Microsoft Edge, Edge Shopping and Microsoft News Feed.
-                    <br />
-                    <br />
-                    Technology I used was HTML, CSS, Typescript, Web Components.
-                  </p>
+            <div class="project">
+              <h4 class="title">FAST</h4>
+              <div class="grid-2">
+                <div class="project-content">
+                  <div class="project-description">
+                    <p class="text">
+                      FAST is a layered framework built on native browser web
+                      component APIs. This is an open source project. I helped
+                      contribute a few components to this library using React
+                      and Web Component technology. Internally within Microsoft
+                      I worked with designers to build components, using the
+                      FAST framework. I build and help iterate on components for
+                      Microsoft Edge, Edge Shopping and Microsoft News Feed.
+                      <br />
+                      <br />
+                      Technology I used was HTML, CSS, Typescript, Web
+                      Components.
+                    </p>
+                  </div>
+                  <span class="btn-container">
+                    <a
+                      href="https://www.fast.design/"
+                      target="_blank"
+                      class="btn small"
+                      >Website</a
+                    >
+                    <a
+                      href="https://github.com/microsoft/fast/"
+                      target="_blank"
+                      class="btn small"
+                      >GitHub</a
+                    >
+                  </span>
                 </div>
-                <span>
-                  <a
-                    href="https://www.fast.design/"
-                    target="_blank"
-                    class="btn small"
-                    >Website</a
-                  >
-                  <a
-                    href="https://github.com/microsoft/fast/"
-                    target="_blank"
-                    class="btn small"
-                    >GitHub</a
-                  >
-                </span>
-              </div>
-              <div class="card-wrapper">
-                <div class="card">
-                  <div class="card-content">
-                    <img
-                      src="./assets/img/portfolio/card-fast.png"
-                      alt="fast image"
-                    />
+                <div class="card-wrapper">
+                  <div class="card">
+                    <div class="card-content">
+                      <img
+                        src="./assets/img/portfolio/card-fast.png"
+                        alt="fast image"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="project grid-2">
-              <div class="project-content">
-                <div class="project-description">
-                  <h4 class="title">Fluent UI</h4>
-                  <p class="text">
-                    I contributed to styling and maintaining the Fluent UI web
-                    component open source library. The biggest contribution and
-                    an ongoing process is making sure the components are
-                    accessible, specifically high contrast.
-                    <br />
-                    <br />
-                    Technology I used was HTML, CSS, Typescript, Web Components.
-                  </p>
+            <div class="project">
+              <h4 class="title">Fluent UI</h4>
+              <div class="grid-2">
+                <div class="project-content">
+                  <div class="project-description">
+                    <p class="text">
+                      I contributed to styling and maintaining the Fluent UI web
+                      component open source library. The biggest contribution
+                      and an ongoing process is making sure the components are
+                      accessible, specifically high contrast.
+                      <br />
+                      <br />
+                      Technology I used was HTML, CSS, Typescript, Web
+                      Components.
+                    </p>
+                  </div>
+                  <span>
+                    <a
+                      href="https://developer.microsoft.com/en-us/fluentui#/"
+                      target="_blank"
+                      class="btn small"
+                      >Website</a
+                    >
+                  </span>
                 </div>
-                <span>
-                  <a
-                    href="https://developer.microsoft.com/en-us/fluentui#/"
-                    target="_blank"
-                    class="btn small"
-                    >Website</a
-                  >
-                </span>
-              </div>
-              <div class="card-wrapper">
-                <div class="card">
-                  <div class="card-content">
-                    <img
-                      src="./assets/img/portfolio/card-fluent.png"
-                      alt="fast image"
-                    />
+                <div class="card-wrapper">
+                  <div class="card">
+                    <div class="card-content">
+                      <img
+                        src="./assets/img/portfolio/card-fluent.png"
+                        alt="fast image"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -227,7 +235,7 @@
       <section class="contact section block" id="contact">
         <div class="container">
           <div class="section-header">
-            <h3 class="section-title">Contact/></h3>
+            <h3 class="section-title">.Contact</h3>
           </div>
 
           <div class="contact-body">
@@ -289,7 +297,7 @@
       <section class="about section block" id="about">
         <div class="container">
           <div class="section-header">
-            <h3 class="section-title">About/></h3>
+            <h3 class="section-title">.About</h3>
           </div>
           <div class="about-body">
             <div class="about-me">
@@ -309,25 +317,29 @@
                   system to get anything they want.
                 </p>
                 <div class="dog-info">
-                  <img
-                    src="./assets/img/milo.png"
-                    alt="milo"
-                    class="img-milo"
-                  />
-                  <p class="text">
-                    <strong>Milo</strong><br />
-                    Our not so little Cavalier King Charles Spaniel puppy. This
-                    pup will eat just about anything.
-                  </p>
-                  <img
-                    src="./assets/img/lenny.png"
-                    alt="lenny"
-                    class="img-lenny"
-                  />
-                  <p class="text">
-                    <strong>Lenny,</strong><br />
-                    Our Miniature Poodle who was rescued from South Korea.
-                  </p>
+                  <div class="d1 grid-2">
+                    <img
+                      src="./assets/img/milo.png"
+                      alt="milo"
+                      class="img-milo"
+                    />
+                    <p class="text">
+                      <strong>Milo</strong><br />
+                      Our not so little Cavalier King Charles Spaniel puppy.
+                      This pup will eat just about anything.
+                    </p>
+                  </div>
+                  <div class="d2 grid-2">
+                    <img
+                      src="./assets/img/lenny.png"
+                      alt="lenny"
+                      class="img-lenny"
+                    />
+                    <p class="text">
+                      <strong>Lenny</strong><br />
+                      Our Miniature Poodle who was rescued from South Korea.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -370,10 +382,8 @@
           </a>
         </div>
         <div class="copyright">
-          <p class="text">
-            Copyright&copy;2022 All rights reserved | Made by
-            <span>Kham Udom</span>
-          </p>
+          <p class="text">Copyright &copy; 2022 All rights reserved</p>
+          <p class="text">Made by Kham Udom</p>
         </div>
       </div>
     </footer>

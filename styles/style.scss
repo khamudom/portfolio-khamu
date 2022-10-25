@@ -139,6 +139,11 @@ img {
     }
   }
 }
+
+.btn-container {
+  display: flex;
+  column-gap: 12px;
+}
 /* End General Styles */
 
 /* Header Styles */
@@ -183,7 +188,6 @@ nav {
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1;
-    // transition: 0.3s;
 
     &.active,
     &:hover {
@@ -320,7 +324,7 @@ nav {
 .projects-body {
   display: flex;
   flex-direction: column;
-  row-gap: 100px;
+  row-gap: 6.25rem;
   width: 100%;
   padding: 4rem 0;
 
@@ -393,7 +397,7 @@ nav {
   .column-left {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 1.25rem;
     margin-right: 8px;
   }
 
@@ -413,6 +417,7 @@ nav {
 
 /* About Styles */
 .about-body {
+  position: relative;
   padding: 4rem 0;
 
   .text {
@@ -436,6 +441,11 @@ nav {
   .dog-info {
     display: flex;
     margin-top: 1.25rem;
+
+    .grid-2 {
+      grid-template-columns: repeat(2, auto);
+      align-items: flex-start;
+    }
 
     .text {
       width: 240px;
@@ -512,3 +522,226 @@ nav {
   }
 }
 /* End Footer Styles */
+
+@media screen and (max-width: 1330px) {
+  .projects-body {
+    .title {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .grid-2 {
+      grid-template-columns: unset;
+
+      .project-content {
+        order: 2;
+        position: relative;
+        margin-top: 2rem;
+      }
+
+      .card-wrapper {
+        order: 1;
+        justify-content: center;
+      }
+    }
+  }
+
+  .about-body .dog-info {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .text {
+      width: 100%;
+    }
+
+    .d2 {
+      margin-top: 1rem;
+
+      .img-lenny {
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .section {
+    padding: 0 0 6rem 0;
+  }
+
+  .header-content {
+    .grid-2 {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding-bottom: 0;
+      grid-template-columns: unset;
+    }
+
+    .column-left {
+      order: 2;
+    }
+
+    .header-title {
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .about-body {
+    .about-me {
+      flex-direction: column;
+      align-items: center;
+
+      .img-about {
+        width: 200px;
+        height: 273px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .contact-body {
+    .grid-2 {
+      display: flex;
+    }
+    .contact-form {
+      .column-left,
+      .column-right {
+        width: 100%;
+      }
+      .contact-input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .text {
+    font-size: 0.8125rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: center;
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .header-content {
+    .column-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .header-title {
+        font-size: 2rem;
+      }
+
+      .header-subtitle {
+        font-size: 1.25rem;
+      }
+
+      .text {
+        font-size: 1rem;
+      }
+    }
+
+    .column-right {
+      margin-left: 0;
+
+      .img-profile {
+        height: 160px;
+      }
+    }
+  }
+
+  .projects-body {
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .card-wrapper .card {
+      width: 100%;
+      height: initial;
+    }
+  }
+
+  .contact-body {
+    .grid-2 {
+      flex-direction: column;
+
+      .column-right {
+        margin-left: 0;
+        margin-top: 1.25rem;
+      }
+    }
+  }
+
+  .about {
+    &.section {
+      padding-bottom: 0;
+    }
+  }
+  .about-body {
+    .img-about {
+      margin-inline-end: 0;
+    }
+
+    .about-me {
+      p span {
+        font-size: 1.5rem;
+      }
+    }
+
+    .dog-info {
+      .grid-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .career-info {
+      p span {
+        font-size: 1.5rem;
+      }
+
+      margin-top: 1rem;
+    }
+  }
+
+  .footer {
+    .container {
+      .top-btn-wrapper {
+        left: 40%;
+
+        &:hover {
+          top: -20px;
+        }
+
+        i {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .copyright {
+      text-align: center;
+      flex-direction: column;
+    }
+  }
+}
