@@ -620,8 +620,23 @@ nav {
 }
 
 @media screen and (max-width: 788px) {
+  nav {
+    position: static;
+  }
+
   .nav-links {
     display: none;
+  }
+
+  .header-content {
+    .grid-2 {
+      justify-content: flex-start;
+      margin-top: 3rem;
+    }
+
+    .column-right {
+      margin-left: 0;
+    }
   }
 }
 
@@ -634,6 +649,17 @@ nav {
     .card-wrapper .card {
       width: auto;
       height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  .header-content {
+    .column-left {
+      margin-right: 0;
     }
   }
 }
@@ -679,7 +705,7 @@ nav {
       margin-left: 0;
 
       .img-profile {
-        height: 160px;
+        height: 16.25rem;
       }
     }
   }

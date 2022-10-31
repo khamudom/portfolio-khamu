@@ -542,8 +542,18 @@ nav .logo {
   }
 }
 @media screen and (max-width: 788px) {
+  nav {
+    position: static;
+  }
   .nav-links {
     display: none;
+  }
+  .header-content .grid-2 {
+    justify-content: flex-start;
+    margin-top: 3rem;
+  }
+  .header-content .column-right {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 660px) {
@@ -553,6 +563,14 @@ nav .logo {
   .projects-body .card-wrapper .card {
     width: auto;
     height: auto;
+  }
+}
+@media screen and (max-width: 412px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  .header-content .column-left {
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 390px) {
@@ -589,7 +607,7 @@ nav .logo {
     margin-left: 0;
   }
   .header-content .column-right .img-profile {
-    height: 160px;
+    height: 16.25rem;
   }
   .projects-body .title {
     font-size: 1.5rem;
