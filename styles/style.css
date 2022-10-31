@@ -541,6 +541,20 @@ nav .logo {
     width: 100%;
   }
 }
+@media screen and (max-width: 788px) {
+  .nav-links {
+    display: none;
+  }
+}
+@media screen and (max-width: 660px) {
+  .section-header .section-title {
+    font-size: 2rem;
+  }
+  .projects-body .card-wrapper .card {
+    width: auto;
+    height: auto;
+  }
+}
 @media screen and (max-width: 390px) {
   .text {
     font-size: 0.8125rem;
@@ -555,9 +569,6 @@ nav .logo {
   .section-header .section-title {
     font-size: 2rem;
     text-align: center;
-  }
-  .nav-links {
-    display: none;
   }
   .header-content .column-left {
     display: flex;
