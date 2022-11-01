@@ -124,16 +124,8 @@ img {
   width: max-content;
   position: relative;
 }
-.section-header .section-title:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 3px;
-  background-color: var(--main-font);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.section-header .section-title span {
+  font-size: 2rem;
 }
 
 .btn-container {
