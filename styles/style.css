@@ -285,7 +285,7 @@ nav .logo {
 }
 .header-content .img-profile {
   width: initial;
-  height: 360px;
+  height: 18.75rem;
 }
 
 /* End Header Styles */
@@ -427,7 +427,7 @@ nav .logo {
 .footer {
   position: relative;
   background-color: var(--main-background-inverse);
-  height: 12rem;
+  height: 8rem;
 }
 .footer .container {
   display: flex;
@@ -459,13 +459,17 @@ nav .logo {
 }
 .footer .container .website-info {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+  height: 100%;
 }
 .footer .container .website-info .text {
+  font-size: 0.8125rem;
   color: var(--main-font-inverse);
 }
 .footer .container .website-info .social-link {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--main-font-inverse);
   -webkit-margin-start: 0.75rem;
           margin-inline-start: 0.75rem;
@@ -565,8 +569,14 @@ nav .logo {
     justify-content: flex-start;
     margin-top: 3rem;
   }
+  .header-content .grid-2 .header-title {
+    font-size: 2.5rem;
+  }
   .header-content .column-right {
     margin-left: 0;
+  }
+  .header-content .img-profile {
+    height: 16.25rem;
   }
 }
 @media screen and (max-width: 660px) {
@@ -581,7 +591,7 @@ nav .logo {
     height: auto;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 600px) {
   .container {
     padding: 0 1.25rem;
   }
@@ -677,9 +687,5 @@ nav .logo {
   }
   .footer .container .top-btn-wrapper i {
     font-size: 1.25rem;
-  }
-  .footer .copyright {
-    text-align: center;
-    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

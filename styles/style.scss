@@ -312,7 +312,7 @@ nav {
 
   .img-profile {
     width: initial;
-    height: 360px;
+    height: 18.75rem;
   }
 }
 /* End Header Styles */
@@ -477,7 +477,7 @@ nav {
 .footer {
   position: relative;
   background-color: var(--main-background-inverse);
-  height: 12rem;
+  height: 8rem;
 
   .container {
     display: flex;
@@ -512,14 +512,18 @@ nav {
 
     .website-info {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 2rem;
+      height: 100%;
 
       .text {
+        font-size: 0.8125rem;
         color: var(--main-font-inverse);
       }
 
       .social-link {
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: var(--main-font-inverse);
         margin-inline-start: 0.75rem;
       }
@@ -652,10 +656,18 @@ nav {
     .grid-2 {
       justify-content: flex-start;
       margin-top: 3rem;
+
+      .header-title {
+        font-size: 2.5rem;
+      }
     }
 
     .column-right {
       margin-left: 0;
+    }
+
+    .img-profile {
+      height: 16.25rem;
     }
   }
 }
@@ -679,7 +691,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 600px) {
   .container {
     padding: 0 1.25rem;
   }
@@ -825,11 +837,6 @@ nav {
           font-size: 1.25rem;
         }
       }
-    }
-
-    .copyright {
-      text-align: center;
-      flex-direction: column;
     }
   }
 }
