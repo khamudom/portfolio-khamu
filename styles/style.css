@@ -33,6 +33,7 @@ html {
   --main-font-inverse: var(--light-two);
   --btn-background-primary: var(--dark-one);
   --btn-font-primary: var(--light-one);
+  --img-frame: var(--dark-one);
 }
 
 /* Dark Theme Color */
@@ -43,6 +44,7 @@ html {
   --main-font-inverse: var(--dark-two);
   --btn-background-primary: var(--light-one);
   --btn-font-primary: var(--dark-one);
+  --img-frame: var(--light-three);
 }
 
 body,
@@ -68,6 +70,7 @@ ul {
 
 img {
   width: 100%;
+  outline: 3px solid var(--img-frame);
 }
 
 .container {
@@ -98,13 +101,15 @@ img {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--btn-background-primary);
-  color: var(--btn-font-primary);
+  border: 1px solid var(--btn-background-primary);
+  background-color: transparent;
+  color: var(--main-font);
   border-radius: 0.25rem;
   font-size: 1rem;
 }
 .btn:hover {
-  background-color: var(--accent-fill-hover);
+  background-color: var(--btn-background-primary);
+  color: var(--main-font-inverse);
 }
 
 .section {
@@ -159,6 +164,7 @@ nav .container {
 nav .logo {
   display: flex;
   align-items: center;
+  background-color: var(--dark-one);
 }
 
 .nav-links ul {
@@ -191,7 +197,7 @@ nav .logo {
 .nav-links .theme-toggle .switch {
   position: relative;
   display: inline-block;
-  height: 26px;
+  height: 25px;
   width: 50px;
 }
 .nav-links .theme-toggle .switch input {
@@ -219,8 +225,8 @@ nav .logo {
 .nav-links .theme-toggle .switch .track:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 25px;
+  width: 25px;
   left: 24px;
   bottom: 0px;
   background-color: var(--main-background);
@@ -280,7 +286,6 @@ nav .logo {
 .header-content .img-profile {
   width: initial;
   height: 360px;
-  border: 6px solid var(--dark-one);
 }
 
 /* End Header Styles */
@@ -360,7 +365,6 @@ nav .logo {
   margin-left: 8px;
 }
 .contact-form .btn-submit {
-  border: none;
   outline: none;
   margin-top: 1rem;
   float: right;
@@ -383,31 +387,32 @@ nav .logo {
   font-size: 32px;
 }
 .about-body .img-about {
-  width: 325px;
-  height: 444px;
-  -webkit-margin-end: 1rem;
-          margin-inline-end: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.about-body .img-about img {
+  width: 9.375rem;
+  height: inherit;
 }
 .about-body .dog-info {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 1.25rem;
 }
 .about-body .dog-info .grid-2 {
   grid-template-columns: repeat(2, auto);
   align-items: flex-start;
 }
-.about-body .dog-info .text {
-  width: 240px;
-}
 .about-body .dog-info .img-milo {
-  width: 246px;
-  height: 159px;
+  width: 12.5rem;
+  height: inherit;
   -webkit-margin-end: 1rem;
           margin-inline-end: 1rem;
 }
 .about-body .dog-info .img-lenny {
-  width: 183px;
-  height: 240px;
+  width: 12.5rem;
+  height: inherit;
   margin: 0 1rem;
 }
 .about-body .career-info {
@@ -422,12 +427,14 @@ nav .logo {
 .footer {
   position: relative;
   background-color: var(--main-background-inverse);
-  height: 300px;
+  height: 12rem;
 }
 .footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   height: 100%;
-  display: flex;
 }
 .footer .container .top-btn-wrapper {
   display: flex;
@@ -435,30 +442,33 @@ nav .logo {
   width: 60px;
   background-color: var(--main-background-inverse);
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 50%;
   border-radius: 50%;
   padding: 0.5rem;
   transition: 0.5s;
+  transform: translateX(-50%);
 }
 .footer .container .top-btn-wrapper:hover {
-  top: -23px;
+  top: -15px;
 }
 .footer .container .top-btn-wrapper i {
   font-size: 2rem;
   transform: translateY(-4px);
   color: var(--main-font-inverse);
 }
-
-.copyright {
-  width: 100%;
+.footer .container .website-info {
   display: flex;
-  justify-content: center;
-  align-self: flex-end;
-  padding-bottom: 30px;
+  align-items: center;
 }
-.copyright .text {
+.footer .container .website-info .text {
   color: var(--main-font-inverse);
+}
+.footer .container .website-info .social-link {
+  font-size: 1.5rem;
+  color: var(--main-font-inverse);
+  -webkit-margin-start: 0.75rem;
+          margin-inline-start: 0.75rem;
 }
 
 /* End Footer Styles */
@@ -514,11 +524,22 @@ nav .logo {
   }
   .about-body .about-me {
     flex-direction: column;
-    align-items: center;
   }
   .about-body .about-me .img-about {
-    width: 200px;
-    height: 273px;
+    flex-wrap: wrap;
+  }
+  .about-body .about-me .img-about img {
+    width: 9.375rem;
+    height: inherit;
+  }
+  .about-body .dog-info {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+  }
+  .about-body .dog-info .img-milo,
+.about-body .dog-info .img-lenny {
+    width: 9.375rem;
   }
 }
 @media screen and (max-width: 820px) {
@@ -552,6 +573,9 @@ nav .logo {
   .section-header .section-title {
     font-size: 2rem;
   }
+  .section-header .section-title span {
+    font-size: 1.5rem;
+  }
   .projects-body .card-wrapper .card {
     width: auto;
     height: auto;
@@ -563,6 +587,20 @@ nav .logo {
   }
   .header-content .column-left {
     margin-right: 0;
+  }
+  .contact-body .grid-2 {
+    flex-direction: column;
+  }
+  .contact-body .column-right {
+    margin-left: 0;
+  }
+  .about-body .dog-info .grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-body .dog-info .text {
+    text-align: center;
   }
 }
 @media screen and (max-width: 390px) {
@@ -636,12 +674,6 @@ nav .logo {
   }
   .about-body .career-info p span {
     font-size: 1.5rem;
-  }
-  .footer .container .top-btn-wrapper {
-    left: 40%;
-  }
-  .footer .container .top-btn-wrapper:hover {
-    top: -20px;
   }
   .footer .container .top-btn-wrapper i {
     font-size: 1.25rem;
