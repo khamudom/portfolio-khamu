@@ -3,6 +3,5 @@
 This is my personal website. It is a simple site built using HTML, SASS and Javascript.
 
 
-
-<img width="1041" alt="image" src="https://user-images.githubusercontent.com/37851220/199388089-e5556e51-e3ed-46a2-b970-f3c7f6b3b714.png">
+<img width="1086" alt="image" src="https://user-images.githubusercontent.com/37851220/199898853-28358d70-c36a-4ee2-b4ae-1d04929495fb.png">
 
