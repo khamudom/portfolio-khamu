@@ -1,0 +1,13 @@
+.back {
+  span {
+    display: flex;
+  }
+}
+
+nav {
+  position: static;
+
+  .nav-links a {
+    padding: 0;
+  }
+}

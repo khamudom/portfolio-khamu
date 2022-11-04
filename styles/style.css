@@ -23,6 +23,11 @@ html {
   --dark-three: #7a7a7a;
   --accent-fill-rest: #3091ff;
   --accent-fill-hover: #2c87ef;
+  --main-background-inverse: var(--light-two);
+  --main-font-inverse: var(--dark-two);
+  --btn-background-primary: var(--light-one);
+  --btn-font-primary: var(--dark-one);
+  --img-frame: var(--light-three);
 }
 
 /* Light Theme Color */
@@ -56,8 +61,8 @@ textarea {
 }
 
 body {
-  background: var(--main-background);
-  color: var(--main-font);
+  background: var(--dark-two);
+  color: var(--light-two);
 }
 
 a {
@@ -135,8 +140,26 @@ img {
 
 .btn-container {
   display: flex;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+
+.transition {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background-color: var(--dark-two);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease-out;
+}
+
+.transition.is-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* End General Styles */
@@ -150,7 +173,7 @@ header {
 nav {
   position: fixed;
   top: 0;
-  background-color: var(--main-background);
+  background-color: var(--dark-two);
   width: 100%;
   z-index: 50;
   transition: 0.3s;
@@ -286,6 +309,7 @@ nav .logo {
 .header-content .img-profile {
   width: initial;
   height: 18.75rem;
+  opacity: 0.7;
 }
 
 /* End Header Styles */
