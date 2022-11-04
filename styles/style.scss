@@ -86,7 +86,7 @@ img {
   position: relative;
   z-index: 5;
   max-width: 92rem;
-  padding: 0 4rem;
+  padding: 0 4em;
   margin: 0 auto;
 }
 
@@ -109,7 +109,7 @@ img {
 
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em;
   border: 1px solid var(--btn-background-primary);
   background-color: transparent;
   color: var(--main-font);
@@ -123,12 +123,12 @@ img {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 6em 0;
 }
 
 .section-header {
   text-align: left;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
 
   .section-title {
     font-family: "Source Code Pro", monospace;
@@ -145,7 +145,7 @@ img {
 
 .btn-container {
   display: flex;
-  column-gap: 8px;
+  column-gap: 0.5rem;
 }
 
 .transition {
@@ -204,7 +204,7 @@ nav {
 
   a {
     display: inline-block;
-    padding: 0.9rem 1.2rem;
+    padding: 0.9em 1.2em;
     color: var(--main-font);
     font-family: "Source Code Pro", monospace;
     font-size: 1.05rem;
@@ -220,81 +220,6 @@ nav {
   .social-link {
     font-size: 1.5rem;
   }
-
-  .theme-toggle {
-    margin-inline-start: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      height: 25px;
-      width: 50px;
-
-      input {
-        opacity: 0;
-
-        &:checked + .track {
-          background: var(--main-background-inverse);
-        }
-
-        &:checked + .track:before {
-          transform: translateX(-24px);
-        }
-
-        &s:checked + .indicator::before {
-          background-color: var(--main-font-inverse);
-        }
-      }
-
-      .track {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--main-background-inverse);
-        transition: 0.4s;
-      }
-
-      .track:before {
-        position: absolute;
-        content: "";
-        height: 25px;
-        width: 25px;
-        left: 24px;
-        bottom: 0px;
-        background-color: var(--main-background);
-        border: 2px solid var(--main-background-inverse);
-        transition: 0.4s;
-      }
-
-      .track,
-      .indicator {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 0.5rem;
-        border-radius: 50px;
-
-        .fa-moon {
-          color: var(--main-font-inverse);
-        }
-
-        .fa-sun {
-          color: var(--main-font-inverse);
-        }
-      }
-
-      .indicator::before {
-        border-radius: 50%;
-      }
-    }
-  }
 }
 
 .header-content {
@@ -306,13 +231,13 @@ nav {
   }
 
   .column-left {
-    margin-right: 1rem;
+    margin-right: 1em;
   }
 
   .column-right {
     display: flex;
     justify-content: center;
-    margin-left: 2rem;
+    margin-left: 2em;
   }
 
   .header-title {
@@ -326,12 +251,12 @@ nav {
     font-size: 2rem;
     line-height: 1.1;
     font-weight: 400;
-    margin-top: 1rem;
+    margin-top: 1em;
   }
 
   .text {
     font-size: 1.25rem;
-    margin: 1rem 0;
+    margin: 1em 0;
   }
 
   .img-profile {
@@ -348,7 +273,7 @@ nav {
   flex-direction: column;
   row-gap: 6.25rem;
   width: 100%;
-  padding: 4rem 0;
+  padding: 4em 0;
 
   .project-content {
     height: 100%;
@@ -364,8 +289,8 @@ nav {
 
   .card {
     position: relative;
-    width: 640px;
-    height: 300px;
+    max-width: 640px;
+    height: inherit;
     background-color: var(--main-background);
     overflow: hidden;
     box-shadow: 0 0 2px black;
@@ -388,7 +313,7 @@ nav {
 }
 
 .contact-body {
-  padding: 4rem 0;
+  padding: 4em 0;
 
   .grid-2 {
     grid-template-columns: repeat(2, auto);
@@ -402,18 +327,18 @@ nav {
     flex-direction: column;
 
     label {
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.25em;
     }
   }
 
   .contact-input {
-    padding: 0.5rem;
-    width: 374px;
-    height: 36px;
+    padding: 0.5em;
+    width: 23.375rem;
+    height: 2.25rem;
   }
 
   .textarea {
-    height: 204px;
+    height: 12.75rem;
     resize: none;
   }
 
@@ -421,16 +346,16 @@ nav {
     display: flex;
     flex-direction: column;
     row-gap: 1.25rem;
-    margin-right: 8px;
+    margin-right: 0.5em;
   }
 
   .column-right {
-    margin-left: 8px;
+    margin-left: 0.5em;
   }
 
   .btn-submit {
     outline: none;
-    margin-top: 1rem;
+    margin-top: 1em;
     float: right;
     cursor: pointer;
   }
@@ -440,24 +365,24 @@ nav {
 /* About Styles */
 .about-body {
   position: relative;
-  padding: 4rem 0;
+  padding: 4em 0;
 
   .text {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
   }
 
   .about-me {
     display: flex;
 
     p span {
-      font-size: 32px;
+      font-size: 2rem;
     }
   }
 
   .img-about {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 0.5rem;
 
     img {
       width: 9.375rem;
@@ -468,7 +393,7 @@ nav {
   .dog-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 2rem;
+    margin-top: 2em;
 
     .grid-2 {
       grid-template-columns: repeat(2, auto);
@@ -478,21 +403,21 @@ nav {
     .img-milo {
       width: 12.5rem;
       height: inherit;
-      margin-inline-end: 1rem;
+      margin-inline-end: 1em;
     }
 
     .img-lenny {
       width: 12.5rem;
       height: inherit;
-      margin: 0 1rem;
+      margin: 0 1em;
     }
   }
 
   .career-info {
-    margin-top: 2rem;
+    margin-top: 2em;
 
     p span {
-      font-size: 32px;
+      font-size: 2rem;
     }
   }
 }
@@ -520,7 +445,7 @@ nav {
       top: -10px;
       left: 50%;
       border-radius: 50%;
-      padding: 0.5rem;
+      padding: 0.5em;
       transition: 0.5s;
       transform: translateX(-50%);
 
@@ -539,7 +464,7 @@ nav {
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding-bottom: 2rem;
+      padding-bottom: 2em;
       height: 100%;
 
       .text {
@@ -557,7 +482,7 @@ nav {
 }
 /* End Footer Styles */
 
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 83.125em) {
   .projects-body {
     .title {
       display: flex;
@@ -590,18 +515,14 @@ nav {
     }
 
     .d2 {
-      margin-top: 1rem;
-
-      .img-lenny {
-        margin: 0 1rem 0 0;
-      }
+      margin-top: 1em;
     }
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 59.375em) {
   .section {
-    padding: 0 0 6rem 0;
+    padding: 0 0 6em 0;
   }
 
   .header-content {
@@ -619,7 +540,7 @@ nav {
 
     .header-title {
       font-size: 3rem;
-      margin-top: 1rem;
+      margin-top: 1em;
     }
   }
 
@@ -645,11 +566,15 @@ nav {
       .img-lenny {
         width: 9.375rem;
       }
+
+      .img-lenny {
+        margin: 0 1em 0 0;
+      }
     }
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 51.25em) {
   .contact-body {
     .grid-2 {
       display: flex;
@@ -668,7 +593,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 788px) {
+@media screen and (max-width: 49.25em) {
   nav {
     position: static;
   }
@@ -680,9 +605,9 @@ nav {
   .header-content {
     .grid-2 {
       justify-content: flex-start;
-      margin-top: 3rem;
+      margin-top: 3em;
       min-height: unset;
-      margin-bottom: 15.625rem;
+      margin-bottom: 15.625em;
 
       .header-title {
         font-size: 2.5rem;
@@ -699,7 +624,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 41.25em) {
   .section-header {
     .section-title {
       font-size: 2rem;
@@ -718,9 +643,9 @@ nav {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5em) {
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1.25em;
   }
 
   .header-content {
@@ -754,13 +679,13 @@ nav {
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 24.375em) {
   .text {
     font-size: 0.8125rem;
   }
 
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1.25em;
   }
 
   .section-header {
@@ -818,7 +743,7 @@ nav {
 
       .column-right {
         margin-left: 0;
-        margin-top: 1.25rem;
+        margin-top: 1.25em;
       }
     }
   }
@@ -849,7 +774,7 @@ nav {
     }
 
     .career-info {
-      margin-top: 1rem;
+      margin-top: 1em;
 
       p span {
         font-size: 1.5rem;
