@@ -21,8 +21,7 @@ html {
   --dark-one: #000000;
   --dark-two: #333333;
   --dark-three: #7a7a7a;
-  --accent-fill-rest: #3091ff;
-  --accent-fill-hover: #2c87ef;
+  --accent-fill: #8cb4ff;
   --main-background-inverse: var(--light-two);
   --main-font-inverse: var(--dark-two);
   --btn-background-primary: var(--light-one);
@@ -75,7 +74,7 @@ ul {
 
 img {
   width: 100%;
-  outline: 3px solid var(--img-frame);
+  outline: 1px solid var(--img-frame);
 }
 
 .container {
@@ -94,7 +93,7 @@ img {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -124,18 +123,23 @@ img {
 .section-header {
   text-align: left;
   margin-bottom: 1.5em;
+  position: relative;
 }
 .section-header .section-title {
   font-family: "Source Code Pro", monospace;
-  font-size: 3rem;
-  font-weight: 400;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  position: relative;
+  font-weight: 600;
+  font-size: clamp(1.625rem, 5vw, 2rem);
 }
-.section-header .section-title span {
-  font-size: 2rem;
+.section-header .section-title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 100%;
+  background-color: var(--light-three);
+  -webkit-margin-start: 0.25em;
+          margin-inline-start: 0.25em;
+  opacity: 0.1;
 }
 
 .btn-container {
@@ -160,6 +164,19 @@ img {
 .transition.is-active {
   opacity: 1;
   pointer-events: all;
+}
+
+.page-nav {
+  position: static;
+  padding: 3em 0;
+}
+.page-nav a {
+  padding: 0;
+  color: var(--main-font);
+  font-size: 1.25rem;
+}
+.page-nav a:hover {
+  color: var(--accent-fill);
 }
 
 /* End General Styles */
@@ -204,7 +221,7 @@ nav .logo {
   line-height: 1;
 }
 .nav-links a.active, .nav-links a:hover {
-  color: var(--accent-fill-hover);
+  color: var(--accent-fill);
 }
 .nav-links .social-link {
   font-size: 1.5rem;
@@ -250,45 +267,67 @@ nav .logo {
 /* Projects Styles */
 .projects-body {
   display: flex;
-  flex-direction: column;
-  row-gap: 6.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75em;
   width: 100%;
   padding: 4em 0;
 }
 .projects-body .project-content {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  height: 19.125rem;
+  padding: 0.75em;
+  background-color: var(--dark-three);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px -15px var(--dark-one);
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.projects-body .project-content:hover {
+  transform: translateY(-0.125rem);
+}
+.projects-body .project-content img {
+  outline: 1px solid #000000;
+  border-radius: 4px;
+}
+.projects-body .project-content .content-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: var(--main-font);
+  height: 100%;
+  margin-top: 0.5em;
 }
-
-.card-wrapper {
+.projects-body .project-content .content-container .icon-container {
   display: flex;
-  justify-content: flex-end;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
 }
-.card-wrapper .card {
-  position: relative;
-  max-width: 640px;
-  height: inherit;
-  background-color: var(--main-background);
-  overflow: hidden;
-  box-shadow: 0 0 2px black;
+.projects-body .project-content .content-container .icon-container img {
+  border-radius: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  outline-color: var(--dark-one);
+  background-color: var(--dark-two);
 }
-.card-wrapper .card .card-content {
+.projects-body .project-content a {
+  color: var(--main-font);
+}
+.projects-body .project-content a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0px;
+  left: 0;
 }
 
 /* End Projects Styles */
 /* Contact Styles */
-.contact {
-  position: relative;
-  width: 100%;
-}
-
 .contact-body {
   padding: 4em 0;
 }
@@ -344,34 +383,40 @@ nav .logo {
 .about-body .about-me p span {
   font-size: 2rem;
 }
-.about-body .img-about {
+.about-body .about-me .img-about {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
 }
-.about-body .img-about img {
+.about-body .about-me .img-me {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 20rem;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
+}
+.about-body .about-me .img-me img {
   width: 9.375rem;
   height: inherit;
 }
 .about-body .dog-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-.about-body .dog-info .grid-2 {
-  grid-template-columns: repeat(2, auto);
+.about-body .dog-info .dog {
+  display: flex;
   align-items: flex-start;
 }
-.about-body .dog-info .img-milo {
-  width: 12.5rem;
+.about-body .dog-info .dog .img-milo,
+.about-body .dog-info .dog .img-lenny {
+  width: 9.375rem;
   height: inherit;
   -webkit-margin-end: 1em;
           margin-inline-end: 1em;
 }
-.about-body .dog-info .img-lenny {
-  width: 12.5rem;
-  height: inherit;
-  margin: 0 1em;
+.about-body .dog-info .dog .text {
+  max-width: 250px;
 }
 .about-body .career-info {
   margin-top: 2em;
@@ -435,11 +480,6 @@ nav .logo {
 
 /* End Footer Styles */
 @media screen and (max-width: 83.125em) {
-  .projects-body .title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  }
   .projects-body .grid-2 {
     grid-template-columns: unset;
   }
@@ -481,27 +521,22 @@ nav .logo {
     font-size: 3rem;
     margin-top: 1em;
   }
-  .about-body .about-me {
-    flex-direction: column;
-  }
   .about-body .about-me .img-about {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  .about-body .about-me .img-about img {
-    width: 9.375rem;
-    height: inherit;
+  .about-body .about-me .img-me {
+    max-width: unset;
+    -webkit-margin-end: unset;
+            margin-inline-end: unset;
+    justify-content: center;
   }
   .about-body .dog-info {
     display: flex;
     flex-direction: column;
     grid-template-columns: unset;
-  }
-  .about-body .dog-info .img-milo,
-.about-body .dog-info .img-lenny {
-    width: 9.375rem;
-  }
-  .about-body .dog-info .img-lenny {
-    margin: 0 1em 0 0;
+    width: 100%;
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 51.25em) {
@@ -540,12 +575,6 @@ nav .logo {
   }
 }
 @media screen and (max-width: 41.25em) {
-  .section-header .section-title {
-    font-size: 2rem;
-  }
-  .section-header .section-title span {
-    font-size: 1.5rem;
-  }
   .projects-body .card-wrapper .card {
     width: auto;
     height: auto;
@@ -564,14 +593,6 @@ nav .logo {
   .contact-body .column-right {
     margin-left: 0;
   }
-  .about-body .dog-info .grid-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-body .dog-info .text {
-    text-align: center;
-  }
 }
 @media screen and (max-width: 24.375em) {
   .text {
@@ -585,7 +606,6 @@ nav .logo {
     justify-content: center;
   }
   .section-header .section-title {
-    font-size: 2rem;
     text-align: center;
   }
   .header-content .column-left {
@@ -626,18 +646,12 @@ nav .logo {
   .about.section {
     padding-bottom: 0;
   }
-  .about-body .img-about {
+  .about-body .img-me {
     -webkit-margin-end: 0;
             margin-inline-end: 0;
   }
   .about-body .about-me p span {
     font-size: 1.5rem;
-  }
-  .about-body .dog-info .grid-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
   .about-body .career-info {
     margin-top: 1em;
