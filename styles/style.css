@@ -20,7 +20,8 @@ html {
   --light-three: #f6f7fb;
   --dark-one: #000000;
   --dark-two: #333333;
-  --dark-three: #7a7a7a;
+  --dark-three: #474747;
+  --dark-four: #7a7a7a;
   --accent-fill: #8cb4ff;
   --main-background-inverse: var(--light-two);
   --main-font-inverse: var(--dark-two);
@@ -94,7 +95,7 @@ img {
 
 .title {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .text {
@@ -277,10 +278,10 @@ nav .logo {
   display: flex;
   flex-direction: column;
   max-width: 20rem;
-  height: 19.125rem;
+  height: 21.25rem;
   padding: 0.75em;
   background-color: var(--dark-three);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   box-shadow: 0 10px 30px -15px var(--dark-one);
   position: relative;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -290,7 +291,7 @@ nav .logo {
 }
 .projects-body .project-content img {
   outline: 1px solid #000000;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 .projects-body .project-content .content-container {
   display: flex;
