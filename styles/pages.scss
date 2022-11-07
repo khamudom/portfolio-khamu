@@ -1,21 +1,27 @@
-.fast {
-  .header {
+.container {
+  max-width: 63.125rem;
+}
+
+.intro {
+  padding: 6em 0 0 0;
+
+  .nav-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
   }
+}
 
-  .divider {
-    width: 100%;
-    height: 2px;
-    background-color: var(--light-three);
-    opacity: 0.1;
-    margin: 3em 0;
-  }
+.divider {
+  opacity: 0.1;
+  margin: 3em 0;
+}
+
+.content {
+  padding: 0 0 6em 0;
 
   .site {
     display: flex;
-    align-items: center;
     justify-content: center;
     column-gap: 2em;
 
@@ -24,14 +30,31 @@
       height: inherit;
     }
 
-    h2 {
-      margin-bottom: 1em;
-    }
-
     .description {
       display: flex;
       flex-direction: column;
-      max-width: 40%;
+      justify-content: center;
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 1em;
+      }
+
+      a {
+        color: var(--accent-fill);
+      }
     }
+  }
+}
+
+.technology {
+  h2 {
+    margin-bottom: 0.25em;
+  }
+
+  li {
+    list-style-type: square;
+    margin-inline-start: 1em;
   }
 }

@@ -19,6 +19,7 @@ html {
   --light-one: #ffffff;
   --light-two: #f9fafb;
   --light-three: #f6f7fb;
+  --light-four: #cacaca;
 
   --dark-one: #000000;
   --dark-two: #333333;
@@ -27,29 +28,11 @@ html {
 
   --accent-fill: #8cb4ff;
 
-  --main-background-inverse: var(--light-two);
-  --main-font-inverse: var(--dark-two);
-  --btn-background-primary: var(--light-one);
-  --btn-font-primary: var(--dark-one);
-  --img-frame: var(--light-three);
-}
-
-/* Light Theme Color */
-.light {
-  --main-background: var(--light-two);
-  --main-background-inverse: var(--dark-two);
-  --main-font: var(--dark-two);
-  --main-font-inverse: var(--light-two);
-  --btn-background-primary: var(--dark-one);
-  --btn-font-primary: var(--light-one);
-  --img-frame: var(--dark-one);
-}
-
-/* Dark Theme Color */
-.dark {
   --main-background: var(--dark-two);
   --main-background-inverse: var(--light-two);
-  --main-font: var(--light-two);
+  --main-font: var(--light-three);
+  --main-font-inverse: var(--dark-two);
+  --main-background-inverse: var(--light-two);
   --main-font-inverse: var(--dark-two);
   --btn-background-primary: var(--light-one);
   --btn-font-primary: var(--dark-one);
@@ -66,7 +49,7 @@ textarea {
 
 body {
   background: var(--dark-two);
-  color: var(--light-two);
+  color: var(--light-three);
 }
 
 a {
@@ -127,6 +110,8 @@ img {
 }
 
 .section-header {
+  display: flex;
+  align-items: center;
   text-align: left;
   margin-bottom: 1.5em;
   position: relative;
@@ -135,16 +120,12 @@ img {
     font-family: "Source Code Pro", monospace;
     font-weight: 600;
     font-size: clamp(1.625rem, 5vw, 2rem);
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      height: 2px;
-      width: 100%;
-      background-color: var(--light-three);
-      margin-inline-start: 0.25em;
-      opacity: 0.1;
-    }
+  }
+
+  .divider {
+    opacity: 0.1;
+    width: 100%;
+    margin-inline-start: 1em;
   }
 }
 
@@ -159,7 +140,7 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 101;
+  z-index: 100;
   background-color: var(--dark-two);
   opacity: 0;
   pointer-events: none;
@@ -420,7 +401,7 @@ nav {
     display: flex;
 
     p span {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     .img-about {
@@ -468,7 +449,7 @@ nav {
     margin-top: 2em;
 
     p span {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 }
