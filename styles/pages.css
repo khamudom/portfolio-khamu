@@ -1,3 +1,7 @@
+main {
+  padding-bottom: 3.125em;
+}
+
 .page-nav a i {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -33,7 +37,7 @@
        column-gap: 2em;
 }
 .content .site img {
-  max-width: 565px;
+  max-width: 31.25rem;
   height: inherit;
 }
 .content .site .description {
