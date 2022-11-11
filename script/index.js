@@ -1,4 +1,4 @@
-// Hide and show navigation bar
+// Hide and show navigation bar on scroll
 var lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", function () {
@@ -64,7 +64,7 @@ window.onload = () => {
   const transitionElement = document.getElementById("transitionElement");
 
   setTimeout(() => {
-    transitionElement.classList.remove("is-active");
+    transitionElement?.classList.remove("is-active");
   }, 100);
 
   for (let i = 0; i < links.length - 1; i++) {
