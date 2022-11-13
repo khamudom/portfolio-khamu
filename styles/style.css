@@ -140,7 +140,7 @@ img {
   background-color: var(--dark-two);
   opacity: 0;
   pointer-events: none;
-  transition: 0.5s var(--easing);
+  transition: 0.3s var(--easing);
 }
 
 .transition.is-active {
@@ -228,24 +228,24 @@ nav .logo {
   font-size: 4rem;
   line-height: 0.8;
   font-weight: 400;
-  -webkit-animation: fadeupLoad 800ms var(--easing) 1s;
-          animation: fadeupLoad 800ms var(--easing) 1s;
+  -webkit-animation: fadeupLoad 400ms var(--easing) 0.3s;
+          animation: fadeupLoad 400ms var(--easing) 0.3s;
 }
 .header-content .header-subtitle {
   font-size: 2rem;
   line-height: 1.1;
   font-weight: 400;
   margin-top: 1em;
-  -webkit-animation: fadeupLoad 800ms var(--easing) 1.1s;
-          animation: fadeupLoad 800ms var(--easing) 1.1s;
+  -webkit-animation: fadeupLoad 400ms var(--easing) 0.4s;
+          animation: fadeupLoad 400ms var(--easing) 0.4s;
 }
 .header-content .header-description {
-  -webkit-animation: fadeupLoad 800ms var(--easing) 1.2s;
-          animation: fadeupLoad 800ms var(--easing) 1.2s;
+  -webkit-animation: fadeupLoad 400ms var(--easing) 0.5s;
+          animation: fadeupLoad 400ms var(--easing) 0.5s;
 }
 .header-content .header-btn {
-  -webkit-animation: fadeupLoad 800ms var(--easing) 1.3s;
-          animation: fadeupLoad 800ms var(--easing) 1.3s;
+  -webkit-animation: fadeupLoad 400ms var(--easing) 0.6s;
+          animation: fadeupLoad 400ms var(--easing) 0.6s;
 }
 .header-content .text {
   font-size: 1.25rem;
@@ -659,38 +659,38 @@ nav .logo {
 }
 /* Animations */
 @-webkit-keyframes fadeupLoad {
-  0% {
-    transform: translateY(100px);
+  from {
+    transform: translateY(50px);
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes fadeupLoad {
-  0% {
-    transform: translateY(100px);
+  from {
+    transform: translateY(50px);
     opacity: 0;
   }
-  100% {
+  to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 @-webkit-keyframes opacityLoad {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @keyframes opacityLoad {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
