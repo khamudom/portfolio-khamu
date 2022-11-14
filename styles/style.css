@@ -228,24 +228,24 @@ nav .logo {
   font-size: 4rem;
   line-height: 0.8;
   font-weight: 400;
-  -webkit-animation: fadeupLoad 400ms var(--easing) 0.3s;
-          animation: fadeupLoad 400ms var(--easing) 0.3s;
+  -webkit-animation: fadeupLoad 400ms var(--easing) 0.4s;
+          animation: fadeupLoad 400ms var(--easing) 0.4s;
 }
 .header-content .header-subtitle {
   font-size: 2rem;
   line-height: 1.1;
   font-weight: 400;
   margin-top: 1em;
-  -webkit-animation: fadeupLoad 400ms var(--easing) 0.4s;
-          animation: fadeupLoad 400ms var(--easing) 0.4s;
-}
-.header-content .header-description {
   -webkit-animation: fadeupLoad 400ms var(--easing) 0.5s;
           animation: fadeupLoad 400ms var(--easing) 0.5s;
 }
-.header-content .header-btn {
+.header-content .header-description {
   -webkit-animation: fadeupLoad 400ms var(--easing) 0.6s;
           animation: fadeupLoad 400ms var(--easing) 0.6s;
+}
+.header-content .header-btn {
+  -webkit-animation: fadeupLoad 400ms var(--easing) 0.7s;
+          animation: fadeupLoad 400ms var(--easing) 0.7s;
 }
 .header-content .text {
   font-size: 1.25rem;

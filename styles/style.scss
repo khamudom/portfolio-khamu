@@ -247,7 +247,7 @@ nav {
     font-size: 4rem;
     line-height: 0.8;
     font-weight: 400;
-    animation: fadeupLoad 400ms var(--easing) 0.3s;
+    animation: fadeupLoad 400ms var(--easing) 0.4s;
   }
 
   .header-subtitle {
@@ -255,15 +255,15 @@ nav {
     line-height: 1.1;
     font-weight: 400;
     margin-top: 1em;
-    animation: fadeupLoad 400ms var(--easing) 0.4s;
-  }
-
-  .header-description {
     animation: fadeupLoad 400ms var(--easing) 0.5s;
   }
 
-  .header-btn {
+  .header-description {
     animation: fadeupLoad 400ms var(--easing) 0.6s;
+  }
+
+  .header-btn {
+    animation: fadeupLoad 400ms var(--easing) 0.7s;
   }
 
   .text {
