@@ -10,7 +10,7 @@ main {
 }
 
 .container {
-  max-width: 63.125rem;
+  max-width: 65rem;
 }
 .container p {
   font-size: 1.125rem;
@@ -33,32 +33,73 @@ main {
 .content {
   padding: 0 0 6em 0;
 }
-.content .site {
+.content .portfolio {
   display: flex;
   justify-content: center;
   -moz-column-gap: 2em;
        column-gap: 2em;
 }
-.content .site img {
+.content .portfolio img {
   max-width: 31.25rem;
   height: inherit;
 }
-.content .site .img-vertical {
-  height: 31.25rem;
-  width: inherit;
-}
-.content .site .description {
+.content .portfolio .description {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.content .site .description h2 {
+.content .portfolio .description h2 {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1em;
 }
-.content .site .description a {
+.content .portfolio .description a {
   color: var(--accent-fill);
+}
+.content .portfolio .description a:hover {
+  text-decoration: underline;
+}
+.content .vertical-tab img {
+  height: 31.25rem;
+  width: inherit;
+}
+.content .devtool {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+}
+.content .devtool .description {
+  justify-content: unset;
+}
+.content .devtool .image {
+  display: flex;
+  flex-direction: column;
+}
+.content .devtool .image img {
+  width: 31.25rem;
+  height: inherit;
+}
+.content .devtool span {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+.content .xbox-intro .image {
+  display: flex;
+  flex-direction: column;
+  margin: 1.25em 0;
+}
+.content .xbox-intro .image img {
+  max-width: 100%;
+  text-align: center;
+}
+.content .xbox-intro span {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5em;
+  font-style: italic;
 }
 
 .technology h2 {

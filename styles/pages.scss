@@ -15,7 +15,7 @@ main {
 }
 
 .container {
-  max-width: 63.125rem;
+  max-width: 65rem;
 
   p {
     font-size: 1.125rem;
@@ -40,7 +40,7 @@ main {
 .content {
   padding: 0 0 6em 0;
 
-  .site {
+  .portfolio {
     display: flex;
     justify-content: center;
     column-gap: 2em;
@@ -48,11 +48,6 @@ main {
     img {
       max-width: 31.25rem;
       height: inherit;
-    }
-
-    .img-vertical {
-      height: 31.25rem;
-      width: inherit;
     }
 
     .description {
@@ -68,7 +63,65 @@ main {
 
       a {
         color: var(--accent-fill);
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
+    }
+  }
+
+  .vertical-tab {
+    img {
+      height: 31.25rem;
+      width: inherit;
+    }
+  }
+
+  .devtool {
+    display: flex;
+    justify-content: center;
+    column-gap: 2em;
+
+    .description {
+      justify-content: unset;
+    }
+
+    .image {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 31.25rem;
+        height: inherit;
+      }
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5em;
+      font-style: italic;
+    }
+  }
+
+  .xbox-intro {
+    .image {
+      display: flex;
+      flex-direction: column;
+      margin: 1.25em 0;
+
+      img {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5em;
+      font-style: italic;
     }
   }
 }
