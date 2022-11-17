@@ -154,21 +154,6 @@ img {
   opacity: 1;
   pointer-events: all;
 }
-
-.page-nav {
-  position: static;
-  padding: 3em 0;
-
-  a {
-    padding: 0;
-    color: var(--main-font);
-    font-size: 1.25rem;
-
-    &:hover {
-      color: var(--accent-fill);
-    }
-  }
-}
 /* End General Styles */
 
 /* Header Styles */
@@ -185,6 +170,8 @@ nav {
   width: 100%;
   z-index: 50;
   transition: 0.3s;
+  transform: translateY(-100px);
+  animation: fadeDownLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
 
   .container {
     display: flex;
@@ -250,7 +237,7 @@ nav {
     line-height: 0.8;
     font-weight: 400;
     opacity: 0;
-    animation: fadeupLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
+    animation: fadeUpLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
   }
 
   .header-subtitle {
@@ -259,17 +246,17 @@ nav {
     font-weight: 400;
     margin-top: 1em;
     opacity: 0;
-    animation: fadeupLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
+    animation: fadeUpLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
   }
 
   .header-description {
     opacity: 0;
-    animation: fadeupLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
+    animation: fadeUpLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
   }
 
   .header-btn {
     opacity: 0;
-    animation: fadeupLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
+    animation: fadeUpLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
   }
 
   .text {
@@ -797,9 +784,20 @@ nav {
 }
 
 /* Animations */
-@keyframes fadeupLoad {
+@keyframes fadeUpLoad {
   from {
     transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDownLoad {
+  from {
+    transform: translateY(-100px);
     opacity: 0;
   }
   to {

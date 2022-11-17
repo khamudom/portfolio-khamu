@@ -1,12 +1,26 @@
 main {
   padding-bottom: 3.125em;
+
+  p {
+    font-size: 1.125rem;
+  }
 }
+
 .page-nav {
+  position: static;
+  padding: 1em 0 3em 0;
   a {
+    padding: 0;
+    color: var(--main-font);
+    font-size: 1.25rem;
+
     i {
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
+
     &:hover {
+      color: var(--accent-fill);
+
       i {
         transform: translateX(-0.25rem);
       }
@@ -14,18 +28,10 @@ main {
   }
 }
 
-.container {
-  max-width: 65rem;
-
-  p {
-    font-size: 1.125rem;
-  }
-}
-
-.intro {
+.project-intro {
   padding: 6em 0 0 0;
 
-  .nav-header {
+  .project-link {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
@@ -37,17 +43,33 @@ main {
   margin: 3em 0;
 }
 
+.container {
+  max-width: 65rem;
+}
+
 .content {
   padding: 0 0 6em 0;
 
   .portfolio {
     display: flex;
-    justify-content: center;
     column-gap: 2em;
 
-    img {
+    .image {
+      display: flex;
+      flex-direction: column;
       max-width: 31.25rem;
-      height: inherit;
+
+      img {
+        width: inherit;
+        height: inherit;
+      }
+
+      span {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5em;
+        font-style: italic;
+      }
     }
 
     .description {
@@ -71,57 +93,41 @@ main {
     }
   }
 
+  // Edge portfolio styles
   .vertical-tab {
-    img {
-      height: 31.25rem;
-      width: inherit;
+    .image {
+      img {
+        height: 31.25rem;
+        width: inherit;
+      }
     }
   }
 
   .devtool {
-    display: flex;
-    justify-content: center;
-    column-gap: 2em;
-
     .description {
       justify-content: unset;
     }
-
-    .image {
-      display: flex;
-      flex-direction: column;
-
-      img {
-        width: 31.25rem;
-        height: inherit;
-      }
-    }
-
-    span {
-      width: 100%;
-      text-align: center;
-      margin-top: 0.5em;
-      font-style: italic;
-    }
   }
 
+  // Xbox portfolio styles
   .xbox-intro {
     .image {
-      display: flex;
-      flex-direction: column;
+      max-width: unset;
       margin: 1.25em 0;
 
       img {
-        max-width: 100%;
-        text-align: center;
+        width: 100%;
       }
     }
+  }
 
-    span {
-      width: 100%;
-      text-align: center;
-      margin-top: 0.5em;
-      font-style: italic;
+  .carousel {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+    .img-carousel {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
     }
   }
 }

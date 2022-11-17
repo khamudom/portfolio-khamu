@@ -149,19 +149,6 @@ img {
   pointer-events: all;
 }
 
-.page-nav {
-  position: static;
-  padding: 3em 0;
-}
-.page-nav a {
-  padding: 0;
-  color: var(--main-font);
-  font-size: 1.25rem;
-}
-.page-nav a:hover {
-  color: var(--accent-fill);
-}
-
 /* End General Styles */
 /* Header Styles */
 header {
@@ -177,6 +164,9 @@ nav {
   width: 100%;
   z-index: 50;
   transition: 0.3s;
+  transform: translateY(-100px);
+  -webkit-animation: fadeDownLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
+          animation: fadeDownLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
 }
 nav .container {
   display: flex;
@@ -230,8 +220,8 @@ nav .logo {
   line-height: 0.8;
   font-weight: 400;
   opacity: 0;
-  -webkit-animation: fadeupLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
-          animation: fadeupLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
+  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
+          animation: fadeUpLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
 }
 .header-content .header-subtitle {
   font-size: 2rem;
@@ -239,18 +229,18 @@ nav .logo {
   font-weight: 400;
   margin-top: 1em;
   opacity: 0;
-  -webkit-animation: fadeupLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
-          animation: fadeupLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
+  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
+          animation: fadeUpLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
 }
 .header-content .header-description {
   opacity: 0;
-  -webkit-animation: fadeupLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
-          animation: fadeupLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
+  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
+          animation: fadeUpLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
 }
 .header-content .header-btn {
   opacity: 0;
-  -webkit-animation: fadeupLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
-          animation: fadeupLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
+  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
+          animation: fadeUpLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
 }
 .header-content .text {
   font-size: 1.25rem;
@@ -663,7 +653,7 @@ nav .logo {
   }
 }
 /* Animations */
-@-webkit-keyframes fadeupLoad {
+@-webkit-keyframes fadeUpLoad {
   from {
     transform: translateY(50px);
     opacity: 0;
@@ -673,9 +663,29 @@ nav .logo {
     opacity: 1;
   }
 }
-@keyframes fadeupLoad {
+@keyframes fadeUpLoad {
   from {
     transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeDownLoad {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeDownLoad {
+  from {
+    transform: translateY(-100px);
     opacity: 0;
   }
   to {

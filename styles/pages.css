@@ -1,25 +1,33 @@
 main {
   padding-bottom: 3.125em;
 }
+main p {
+  font-size: 1.125rem;
+}
 
+.page-nav {
+  position: static;
+  padding: 1em 0 3em 0;
+}
+.page-nav a {
+  padding: 0;
+  color: var(--main-font);
+  font-size: 1.25rem;
+}
 .page-nav a i {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.page-nav a:hover {
+  color: var(--accent-fill);
 }
 .page-nav a:hover i {
   transform: translateX(-0.25rem);
 }
 
-.container {
-  max-width: 65rem;
-}
-.container p {
-  font-size: 1.125rem;
-}
-
-.intro {
+.project-intro {
   padding: 6em 0 0 0;
 }
-.intro .nav-header {
+.project-intro .project-link {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
@@ -30,18 +38,32 @@ main {
   margin: 3em 0;
 }
 
+.container {
+  max-width: 65rem;
+}
+
 .content {
   padding: 0 0 6em 0;
 }
 .content .portfolio {
   display: flex;
-  justify-content: center;
   -moz-column-gap: 2em;
        column-gap: 2em;
 }
-.content .portfolio img {
+.content .portfolio .image {
+  display: flex;
+  flex-direction: column;
   max-width: 31.25rem;
+}
+.content .portfolio .image img {
+  width: inherit;
   height: inherit;
+}
+.content .portfolio .image span {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5em;
+  font-style: italic;
 }
 .content .portfolio .description {
   display: flex;
@@ -59,47 +81,28 @@ main {
 .content .portfolio .description a:hover {
   text-decoration: underline;
 }
-.content .vertical-tab img {
+.content .vertical-tab .image img {
   height: 31.25rem;
   width: inherit;
-}
-.content .devtool {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 2em;
-       column-gap: 2em;
 }
 .content .devtool .description {
   justify-content: unset;
 }
-.content .devtool .image {
-  display: flex;
-  flex-direction: column;
-}
-.content .devtool .image img {
-  width: 31.25rem;
-  height: inherit;
-}
-.content .devtool span {
-  width: 100%;
-  text-align: center;
-  margin-top: 0.5em;
-  font-style: italic;
-}
 .content .xbox-intro .image {
-  display: flex;
-  flex-direction: column;
+  max-width: unset;
   margin: 1.25em 0;
 }
 .content .xbox-intro .image img {
-  max-width: 100%;
-  text-align: center;
-}
-.content .xbox-intro span {
   width: 100%;
-  text-align: center;
-  margin-top: 0.5em;
-  font-style: italic;
+}
+.content .carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.content .carousel .img-carousel {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .technology h2 {
