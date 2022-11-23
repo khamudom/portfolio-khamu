@@ -97,9 +97,10 @@ img {
   border-radius: 0.25rem;
   font-size: 1rem;
 }
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: var(--btn-background-primary);
   color: var(--main-font-inverse);
+  outline-color: var(--dark-two);
 }
 
 .section {
@@ -178,6 +179,10 @@ nav .logo {
   display: flex;
   align-items: center;
   background-color: var(--dark-one);
+  max-width: 2.5rem;
+}
+nav .logo img {
+  outline: none;
 }
 
 .nav-links ul {

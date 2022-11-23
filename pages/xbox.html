@@ -40,7 +40,7 @@
           </div>
         </nav>
       </header>
-
+      <div class="wip">** WIP Currently adding more content of my work **</div>
       <section class="project-intro">
         <div class="container">
           <div class="project-link">
@@ -56,11 +56,10 @@
             </span>
           </div>
           <p>
-            Collaborated with the Xbox Console Design team to help them
-            understand the product capabilities and limits. In addition work
-            along side the development team to create and implement templates.
-            Worked on multiple iterations of the UI from the launch of Xbox One
-            to the console release of the Xbox One S and X.
+            Collaborated with project managers, the Xbox console design team and
+            the engineering team to create and implement UI templates. Worked on
+            multiple iterations of the UI from the launch of the Xbox One to the
+            console release of the Xbox One S and X.
           </p>
           <hr class="divider" />
         </div>
@@ -69,14 +68,67 @@
       <section class="content">
         <div class="container">
           <div>
+            <div class="portfolio xbox-process">
+              <div class="description">
+                <h2>Process</h2>
+
+                <div class="wrapper">
+                  <div class="image">
+                    <img
+                      src="/assets/img/xbox/architecture.png"
+                      alt="dashboard 2013"
+                    />
+                    <span
+                      ><caption>
+                        OS Architecture
+                      </caption></span
+                    >
+                  </div>
+                  <div>
+                    <p>
+                      The UI work is done in the Xbox Shell, which is part of
+                      the shared partition of the OS. The UI and UX experiences
+                      I contributed to within the shell was the home dashboard,
+                      stores, and collections, also known as my games and apps.
+                    </p>
+                    <br />
+                    <p>
+                      Using the MVVM pattern, the majority of the work was done
+                      in the view, using XAML controls. I would build and style
+                      the templates, create resource dictionaries and bind the
+                      controls to the view model.
+                    </p>
+                  </div>
+                </div>
+                <br />
+                <p>
+                  This structure allowed me to work closely with our engineering
+                  partners simultaneously. Often times the design would fall
+                  short in the product due to only focusing on making the
+                  features work. But with how the files are structured, this
+                  gave our engineering team the ability to focus on the
+                  functionality of the feature, while I focused on building,
+                  crafting and perfecting the UI and UX experiences. Along with
+                  making sure the product is accessible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div>
             <div class="portfolio xbox-intro">
               <div class="description">
-                <h2>Dashboard and Details Pages</h2>
+                <h2>User Interface and Experience</h2>
 
                 <p>
-                  Working with the Interaction, Motion and Visual design team to
+                  Worked with the Interaction, Motion and Visual design team to
                   help implement their design vision into the Xbox One.
                 </p>
+                <br />
                 <p>
                   At launch my main focus was building the games and app details
                   and subscription pages. Also assisted in the Home and Store
@@ -101,42 +153,84 @@
 
       <section class="content">
         <div class="container">
-          <div>
-            <div class="portfolio">
-              <div class="description">
-                <h2>Iterations</h2>
-
-                <p>
-                  Further iteration I took on owning the Dashboard, specifically
-                  the Store twist, and in addition, the Gold Lounge and My Games
-                  and Apps pages.
-                </p>
-
-                <!-- <div class="carousel">
-                  <div class="img-container">
-                    <img class="img-carousel" src="" alt="" />
-                    <img class="img-carousel" src="" alt="" />
-                    <img class="img-carousel" src="" alt="" />
-                    <img class="img-carousel" src="" alt="" />
-                  </div>
-                </div> -->
-              </div>
+          <div class="portfolio xbox-iteration">
+            <div class="description">
+              <h2>Updates and Iterations</h2>
+              <p>
+                The dashboard got more twist on the next few updates. I created
+                templates and layouts for the editorial, trending and broadcast
+                columns on the What's On twist. Build multiple layouts and
+                components for the Store twist and the store's L2 pages.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content">
-        <div class="container">
-          <div class="">
-            <div class="portfolio">
-              <div class="description">
-                <h2>Architecture</h2>
-
-                <p>
-                  The UI is part of Xbox Shell and the language used to build
-                  our UI Views is XAML. We also used the MVVM architecture.
-                </p>
+            <div class="image">
+              <div class="carousel">
+                <div class="slides-overflow">
+                  <div id="slidesContainer" class="slides">
+                    <div class="slide">
+                      <img
+                        src="../assets/img/xbox/whatsontwist.png"
+                        alt="whats on"
+                      />
+                      <span>
+                        <caption>
+                          What's On twist
+                        </caption>
+                      </span>
+                    </div>
+                    <div class="slide">
+                      <img
+                        src="../assets/img/xbox/storetwist.png"
+                        alt="store twist"
+                      />
+                      <span>
+                        <caption>
+                          Store twist
+                        </caption>
+                      </span>
+                    </div>
+                    <div class="slide">
+                      <img
+                        src="../assets/img/xbox/storeL2a.png"
+                        alt="store L2"
+                      />
+                      <span>
+                        <caption>
+                          L2 of the Games store
+                        </caption>
+                      </span>
+                    </div>
+                    <div class="slide">
+                      <img
+                        src="../assets/img/xbox/storeL2b.png"
+                        alt="store L2"
+                      />
+                      <span>
+                        <caption>
+                          L2 Games store categories
+                        </caption>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-btn">
+                  <button
+                    type="button"
+                    id="prevBtn"
+                    class="prev-btn"
+                    title="previous slide"
+                  >
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button
+                    type="button"
+                    id="nextBtn"
+                    class="next-btn"
+                    title="next slide"
+                  >
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

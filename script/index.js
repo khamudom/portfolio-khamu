@@ -82,3 +82,42 @@ window.onload = () => {
     });
   }
 };
+
+// Carousel
+const slidesContainer = document.getElementById("slidesContainer");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+const img = document.querySelectorAll("#slidesContainer img");
+
+let idx = 0;
+
+function run() {
+  idx++;
+  changeImage();
+}
+
+function changeImage() {
+  if (idx > img.length - 1) {
+    idx = 0;
+  } else if (idx < 0) {
+    idx = img.length - 1;
+  }
+
+  slidesContainer.style.transform = `translateX(${-idx * 500}px)`;
+}
+
+function resetInterval() {
+  clearInterval(interval);
+  interval = setInterval(run, 2000);
+}
+
+nextBtn.addEventListener("click", () => {
+  idx++;
+  changeImage();
+});
+
+prevBtn.addEventListener("click", () => {
+  idx--;
+  changeImage();
+});

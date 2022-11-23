@@ -102,9 +102,11 @@ img {
   border-radius: 0.25rem;
   font-size: 1rem;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--btn-background-primary);
     color: var(--main-font-inverse);
+    outline-color: var(--dark-two);
   }
 }
 
@@ -184,6 +186,11 @@ nav {
     display: flex;
     align-items: center;
     background-color: var(--dark-one);
+    max-width: 2.5rem;
+
+    img {
+      outline: none;
+    }
   }
 }
 
