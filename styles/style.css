@@ -179,10 +179,7 @@ nav .logo {
   display: flex;
   align-items: center;
   background-color: var(--dark-one);
-  max-width: 2.5rem;
-}
-nav .logo img {
-  outline: none;
+  max-width: 3.125rem;
 }
 
 .nav-links ul {
