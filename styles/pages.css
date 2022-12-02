@@ -88,7 +88,8 @@ main .wip {
   height: 31.25rem;
   width: inherit;
 }
-.content .devtool .description {
+.content .devtool .description,
+.content .website .description {
   justify-content: unset;
 }
 .content .xbox-process .wrapper {
