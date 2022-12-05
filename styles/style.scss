@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
 
 /* General Styles */
 *,
@@ -46,7 +46,7 @@ body,
 button,
 input,
 textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
@@ -122,7 +122,7 @@ img {
   position: relative;
 
   .section-title {
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Source Code Pro', monospace;
     font-weight: 600;
     font-size: clamp(1.625rem, 5vw, 2rem);
   }
@@ -200,7 +200,7 @@ nav {
     display: inline-block;
     padding: 0.9em 1.2em;
     color: var(--main-font);
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Source Code Pro', monospace;
     font-size: 1.05rem;
     font-weight: 500;
     line-height: 1;
@@ -235,7 +235,7 @@ nav {
   }
 
   .header-title {
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Source Code Pro', monospace;
     font-size: 4rem;
     line-height: 0.8;
     font-weight: 400;
@@ -280,7 +280,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75em;
+  gap: 1.25em;
   width: 100%;
   padding: 4em 0;
 
@@ -330,7 +330,7 @@ nav {
     a {
       color: var(--main-font);
       &:before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         z-index: 0;

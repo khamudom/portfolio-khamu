@@ -4,11 +4,6 @@ main {
 main p {
   font-size: 1.125rem;
 }
-main .wip {
-  display: flex;
-  justify-content: center;
-  color: yellow;
-}
 
 .page-nav {
   position: static;
@@ -117,63 +112,27 @@ main .wip {
 .content .xbox-iteration .description {
   justify-content: unset;
 }
-.content .xbox-iteration .carousel {
-  position: relative;
-  width: 31.25rem;
-  border: none;
-  box-sizing: border-box;
-}
-.content .xbox-iteration .carousel .slides-overflow {
-  overflow: hidden;
-}
-.content .xbox-iteration .carousel .slides {
-  display: flex;
-  transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
-}
-.content .xbox-iteration .carousel .slides .slide {
-  display: flex;
-  flex-direction: column;
-}
-.content .xbox-iteration .carousel .slides .slide img {
-  width: 31.25rem;
-  height: inherit;
-  outline: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 1px solid #ffffff;
-}
-.content .xbox-iteration .carousel .slider-btn {
-  display: flex;
-  justify-content: space-between;
+.content .xbox-iteration .description .image {
+  max-width: unset;
   width: 100%;
-  position: absolute;
-  top: 32%;
+  margin: 1.25em 0;
 }
-.content .xbox-iteration .carousel .slider-btn .prev-btn,
-.content .xbox-iteration .carousel .slider-btn .next-btn {
-  background: none;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: none;
-  width: 2rem;
-  height: 4rem;
-  color: var(--light-one);
-  position: absolute;
-  top: 0;
+.content .xbox-iteration .description .home-twist,
+.content .xbox-iteration .description .store-twist {
+  display: grid;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  margin: 2.5em 0;
 }
-.content .xbox-iteration .carousel .slider-btn .prev-btn:hover,
-.content .xbox-iteration .carousel .slider-btn .next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.content .xbox-iteration .description .home-twist .image,
+.content .xbox-iteration .description .store-twist .image {
+  width: 31.25rem;
+  margin: 0;
 }
-.content .xbox-iteration .carousel .slider-btn .prev-btn:hover i,
-.content .xbox-iteration .carousel .slider-btn .next-btn:hover i {
-  transform: scale(1.2);
-}
-.content .xbox-iteration .carousel .slider-btn .prev-btn {
-  left: -38px;
-}
-.content .xbox-iteration .carousel .slider-btn .next-btn {
-  right: -38px;
+.content .xbox-iteration .description .home-twist p,
+.content .xbox-iteration .description .store-twist p {
+  padding-top: 2em;
 }
 
 .technology h2 {
