@@ -2,7 +2,7 @@
 
 This is my personal website. It is a simple site built using HTML, SASS and Javascript.
 
+![image](https://user-images.githubusercontent.com/37851220/205598535-55594af7-d3dc-4e7c-a592-69090b5446e9.png)
 
-<img width="1053" alt="image" src="https://user-images.githubusercontent.com/37851220/200245206-60659e98-14d5-4858-9328-df2c11f086dc.png">
 
 
