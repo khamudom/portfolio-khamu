@@ -161,7 +161,7 @@ header {
 nav {
   position: fixed;
   top: 0;
-  background-color: var(--dark-two);
+  background-color: var(--dark-three);
   width: 100%;
   z-index: 50;
   transition: 0.3s;
@@ -179,7 +179,7 @@ nav .logo {
   display: flex;
   align-items: center;
   background-color: var(--dark-one);
-  max-width: 3.125rem;
+  max-width: 2.5rem;
 }
 
 .nav-links ul {
@@ -365,11 +365,14 @@ nav .logo {
   position: relative;
   padding: 4em 0;
 }
-.about-body .text {
-  margin-bottom: 1em;
-}
 .about-body .about-me {
   display: flex;
+}
+.about-body .about-me .personal-info {
+  display: flex;
+}
+.about-body .about-me .personal-info .text {
+  max-width: 31.25rem;
 }
 .about-body .about-me p span {
   font-size: 1.5rem;
