@@ -256,11 +256,35 @@ nav .logo {
 
 /* End Header Styles */
 /* Projects Styles */
+.projects-section {
+  padding-top: 4em;
+}
+.projects-section .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.projects-section .section-header .projects-title {
+  color: #c2c2c2;
+  font-weight: 400;
+  margin: 0 1rem;
+}
+.projects-section .section-header .divider {
+  opacity: 0.1;
+  width: 10%;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+}
+.projects-section .projects-body {
+  padding: 2em 0;
+}
+
 .projects-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.25em;
+  gap: 2em;
   width: 100%;
   padding: 4em 0;
 }
@@ -295,6 +319,7 @@ nav .logo {
   display: flex;
   -moz-column-gap: 4px;
        column-gap: 4px;
+  justify-content: end;
 }
 .projects-body .project-content .content-container .icon-container img {
   border-radius: 0;

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/kulogo.ico" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Kham Portfolio</title>
+  </head>
+  <body>
+    <div id="transitionElement" class="transition is-active"></div>
+    <main>
+      <header>
+        <nav class="page-nav">
+          <div class="container">
+            <a id="transitionLink" href="/#projects" target="_self">
+              <span class="back">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+              </span>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <section class="project-intro">
+        <div class="container">
+          <div class="project-link">
+            <h1>Save To Bookmarks Clone</h1>
+            <span class="btn-container">
+              <a
+                href="https://clone-savetobookmarks.netlify.app/"
+                target="_blank"
+                class="btn"
+                title="website"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a
+                href="https://github.com/khamudom/save-to-bookmarks-clone"
+                target="_blank"
+                class="btn"
+                title="github"
+                ><i class="fa-brands fa-github"></i>
+              </a>
+            </span>
+          </div>
+          <p>
+            My purpose for building this clone was more for fun and
+            experimenting. Just a note that this is not a complete one to one,
+            and pixel to pixel clone. Not all features work. Another side note
+            is that the app has been updated since I started this project. The
+            layout toggle is no longer in the latest version.
+          </p>
+          <br />
+          <p>
+            This is a great app to manage your twitter bookmarks. Check out the
+            real app
+            <a
+              class="link"
+              href="https://savetobookmarks.com/"
+              target="_blank"
+              title="save to bookmarks website"
+              >here</a
+            >
+            and give it a try.
+          </p>
+          <hr class="divider" />
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div>
+            <div class="portfolio bookmark">
+              <div class="description">
+                <div class="wrapper">
+                  <div>
+                    <p>
+                      As an experiment, I wanted to resolve the issue of having
+                      to scroll all the way back up to the top of the page to
+                      toggle my tags and change layouts.
+                    </p>
+                    <br />
+                    <p>
+                      I added a floating header that would show as I scrolled
+                      down the page. Now users can pick through tags and change
+                      the layout without having to scroll to the top of the
+                      page.
+                    </p>
+                    <br />
+                  </div>
+                </div>
+                <div class="image">
+                  <img
+                    src="/assets/img/bookmarks/saveheader.png"
+                    alt="save to bookmarks header"
+                  />
+                  <span
+                    ><caption>
+                      Header appears as user scrolls into the bookmarks
+                    </caption></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology">
+        <div class="container">
+          <hr class="divider" />
+          <h2>Technologies</h2>
+          <ul>
+            <li>React</li>
+            <li>Next JS</li>
+            <li>Typescript</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="../script/index.js"></script>
+  </body>
+</html>

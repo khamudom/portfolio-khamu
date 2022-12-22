@@ -4,6 +4,12 @@ main {
 main p {
   font-size: 1.125rem;
 }
+main .link {
+  color: var(--accent-fill);
+}
+main .link:hover {
+  text-decoration: underline;
+}
 
 .page-nav {
   position: static;
@@ -73,12 +79,6 @@ main p {
   font-weight: 500;
   margin-bottom: 1em;
 }
-.content .portfolio .description a {
-  color: var(--accent-fill);
-}
-.content .portfolio .description a:hover {
-  text-decoration: underline;
-}
 .content .vertical-tab .image img {
   height: 31.25rem;
   width: inherit;
@@ -133,6 +133,12 @@ main p {
 .content .xbox-iteration .description .home-twist p,
 .content .xbox-iteration .description .store-twist p {
   padding-top: 2em;
+}
+.content .bookmark .image {
+  width: 50rem;
+  max-width: unset;
+  margin: auto;
+  padding-top: 2.5em;
 }
 
 .technology h2 {

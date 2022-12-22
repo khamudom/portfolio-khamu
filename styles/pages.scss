@@ -4,6 +4,14 @@ main {
   p {
     font-size: 1.125rem;
   }
+
+  .link {
+    color: var(--accent-fill);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .page-nav {
@@ -81,14 +89,6 @@ main {
         font-weight: 500;
         margin-bottom: 1em;
       }
-
-      a {
-        color: var(--accent-fill);
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
     }
   }
 
@@ -161,6 +161,16 @@ main {
           padding-top: 2em;
         }
       }
+    }
+  }
+
+  // Save to bookmarks portfolio styles
+  .bookmark {
+    .image {
+      width: 50rem;
+      max-width: unset;
+      margin: auto;
+      padding-top: 2.5em;
     }
   }
 }
