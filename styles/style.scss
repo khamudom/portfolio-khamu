@@ -406,9 +406,18 @@ nav {
 
     .personal-info {
       display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .img-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
       .text {
-        max-width: 31.25rem;
+        max-width: 37.5rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -416,16 +425,10 @@ nav {
       font-size: 1.5rem;
     }
 
-    .img-about {
-      display: flex;
-      justify-content: center;
-    }
-
     .img-me {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      max-width: 20rem;
       margin-inline-end: 2rem;
 
       img {
@@ -458,7 +461,7 @@ nav {
   }
 
   .career-info {
-    margin-top: 2em;
+    margin-top: 3em;
 
     p span {
       font-size: 1.5rem;
@@ -551,6 +554,11 @@ nav {
       .personal-info {
         flex-direction: column;
 
+        .img-me {
+          justify-content: center;
+          margin-bottom: 2rem;
+        }
+
         .text {
           max-width: unset;
         }
@@ -558,8 +566,9 @@ nav {
     }
 
     .dog-info {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
+      justify-content: center;
 
       .dog {
         .text {

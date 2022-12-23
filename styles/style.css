@@ -371,22 +371,25 @@ nav .logo {
 }
 .about-body .about-me .personal-info {
   display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.about-body .about-me .personal-info .img-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .about-body .about-me .personal-info .text {
-  max-width: 31.25rem;
+  max-width: 37.5rem;
+  margin-bottom: 2rem;
 }
 .about-body .about-me p span {
   font-size: 1.5rem;
-}
-.about-body .about-me .img-about {
-  display: flex;
-  justify-content: center;
 }
 .about-body .about-me .img-me {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  max-width: 20rem;
   -webkit-margin-end: 2rem;
           margin-inline-end: 2rem;
 }
@@ -414,7 +417,7 @@ nav .logo {
   max-width: 250px;
 }
 .about-body .career-info {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 .about-body .career-info p span {
   font-size: 1.5rem;
@@ -493,12 +496,17 @@ nav .logo {
   .about-body .about-me .personal-info {
     flex-direction: column;
   }
+  .about-body .about-me .personal-info .img-me {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
   .about-body .about-me .personal-info .text {
     max-width: unset;
   }
   .about-body .dog-info {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: center;
   }
   .about-body .dog-info .dog .text {
     max-width: 250px;
