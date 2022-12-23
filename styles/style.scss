@@ -280,7 +280,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em;
+  gap: 1.25em;
   width: 100%;
   padding: 4em 0;
 
@@ -544,9 +544,29 @@ nav {
     }
   }
 
-  .about-body .dog-info {
-    flex-direction: column;
-    align-items: flex-start;
+  .about-body {
+    .about-me {
+      justify-content: center;
+
+      .personal-info {
+        flex-direction: column;
+
+        .text {
+          max-width: unset;
+        }
+      }
+    }
+
+    .dog-info {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .dog {
+        .text {
+          max-width: 250px;
+        }
+      }
+    }
 
     .text {
       width: 100%;
@@ -599,6 +619,7 @@ nav {
     .dog-info {
       display: flex;
       flex-direction: column;
+      align-items: center;
       grid-template-columns: unset;
       width: 100%;
       margin-top: 2rem;

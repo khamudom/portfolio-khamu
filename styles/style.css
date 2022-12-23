@@ -260,7 +260,7 @@ nav .logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em;
+  gap: 1.25em;
   width: 100%;
   padding: 4em 0;
 }
@@ -487,14 +487,26 @@ nav .logo {
     order: 1;
     justify-content: center;
   }
+  .about-body .about-me {
+    justify-content: center;
+  }
+  .about-body .about-me .personal-info {
+    flex-direction: column;
+  }
+  .about-body .about-me .personal-info .text {
+    max-width: unset;
+  }
   .about-body .dog-info {
     flex-direction: column;
     align-items: flex-start;
   }
-  .about-body .dog-info .text {
+  .about-body .dog-info .dog .text {
+    max-width: 250px;
+  }
+  .about-body .text {
     width: 100%;
   }
-  .about-body .dog-info .d2 {
+  .about-body .d2 {
     margin-top: 1em;
   }
 }
@@ -529,6 +541,7 @@ nav .logo {
   .about-body .dog-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     grid-template-columns: unset;
     width: 100%;
     margin-top: 2rem;
