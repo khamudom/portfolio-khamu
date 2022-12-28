@@ -317,6 +317,12 @@ nav .logo {
   top: 0px;
   left: 0;
 }
+.projects-body .project-content .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
 
 /* End Projects Styles */
 /* Contact Styles */
