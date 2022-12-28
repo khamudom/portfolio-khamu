@@ -156,6 +156,20 @@ img {
   opacity: 1;
   pointer-events: all;
 }
+
+.icon-container {
+  display: flex;
+  column-gap: 4px;
+  justify-content: end;
+
+  img {
+    border-radius: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    outline-color: var(--dark-one);
+    background-color: var(--dark-two);
+  }
+}
 /* End General Styles */
 
 /* Header Styles */
@@ -314,16 +328,10 @@ nav {
       margin-top: 0.5em;
 
       .icon-container {
-        display: flex;
-        column-gap: 4px;
         justify-content: end;
 
         img {
           border-radius: 0;
-          width: 1.25rem;
-          height: 1.25rem;
-          outline-color: var(--dark-one);
-          background-color: var(--dark-two);
         }
       }
     }
@@ -481,12 +489,13 @@ nav {
 .footer {
   position: relative;
   background-color: var(--dark-three);
-  height: 8rem;
+  height: 10rem;
 
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     position: relative;
     height: 100%;
 
@@ -518,7 +527,7 @@ nav {
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding-bottom: 2em;
+      padding-bottom: 1em;
       height: 100%;
 
       .text {
@@ -531,6 +540,10 @@ nav {
         color: var(--main-font);
         margin-inline-start: 0.75rem;
       }
+    }
+
+    .icon-container {
+      margin-bottom: 2.5em;
     }
   }
 }
