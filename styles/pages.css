@@ -62,6 +62,7 @@ main .link:hover {
 .content .portfolio .image img {
   width: inherit;
   height: inherit;
+  border-radius: 6px;
 }
 .content .portfolio .image span {
   width: 100%;
@@ -139,6 +140,22 @@ main .link:hover {
   max-width: unset;
   margin: auto;
   padding-top: 2.5em;
+}
+.content .netflix-login .image {
+  width: 20rem;
+  max-width: unset;
+  margin: auto;
+  padding-top: 2.5em;
+}
+.content .netflix-membership .image {
+  width: 30rem;
+}
+.content .netflix-subscription .image {
+  width: 25rem;
+  justify-content: center;
+}
+.content .netflix-subscription .description {
+  justify-content: flex-start;
 }
 
 .technology h2 {

@@ -69,6 +69,7 @@ main {
       img {
         width: inherit;
         height: inherit;
+        border-radius: 6px;
       }
 
       span {
@@ -171,6 +172,33 @@ main {
       max-width: unset;
       margin: auto;
       padding-top: 2.5em;
+    }
+  }
+
+  // Netflix portfolio styles
+  .netflix-login {
+    .image {
+      width: 20rem;
+      max-width: unset;
+      margin: auto;
+      padding-top: 2.5em;
+    }
+  }
+
+  .netflix-membership {
+    .image {
+      width: 30rem;
+    }
+  }
+
+  .netflix-subscription {
+    .image {
+      width: 25rem;
+      justify-content: center;
+    }
+
+    .description {
+      justify-content: flex-start;
     }
   }
 }

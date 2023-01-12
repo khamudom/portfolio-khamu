@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/kulogo.ico" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Kham Portfolio</title>
+  </head>
+  <body>
+    <div id="transitionElement" class="transition is-active"></div>
+    <main>
+      <header>
+        <nav class="page-nav">
+          <div class="container">
+            <a id="transitionLink" href="/#projects" target="_self">
+              <span class="back">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+              </span>
+            </a>
+          </div>
+        </nav>
+      </header>
+      <section class="project-intro">
+        <div class="container">
+          <div class="project-link">
+            <h1>Netflix Clone</h1>
+            <span class="btn-container">
+              <a
+                href="https://netflix-clone-psi-sooty.vercel.app"
+                target="_blank"
+                class="btn"
+                title="website"
+                ><i class="fa-solid fa-globe"></i> Demo</a
+              >
+              <a
+                href="https://github.com/khamudom/netflix-clone"
+                target="_blank"
+                class="btn"
+                title="github"
+                ><i class="fa-brands fa-github"></i> Github
+              </a>
+            </span>
+          </div>
+          <p>
+            Building this clone was a fun way to build my front-end skills. The
+            project has functionality to sign up, select or cancel
+            subscriptions, playing trailers and add content to a personal list.
+            It is also fully responsive.
+          </p>
+          <br />
+          <p>
+            This is a work in progress. Plan on adding more functionality and
+            explore customizing the UI.
+          </p>
+          <hr class="divider" />
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="portfolio netflix-login">
+            <div class="image">
+              <img src="/assets/img/netflix/signin.png" alt="sign in" />
+              <span>
+                <caption>
+                  Sign-in and Sign-up page
+                </caption>
+              </span>
+            </div>
+            <div class="description">
+              <h2>Login</h2>
+              <p>
+                I built a login page and with
+                <a
+                  class="link"
+                  href="https://firebase.google.com/"
+                  target="_blank"
+                  title="firebase"
+                  >Firebase,</a
+                >
+                I added the functionality to create a new user, or sign in with
+                a valid email and password credential.
+              </p>
+              <br />
+              <p>
+                Use these credentials to sign in.<br />
+                Email: "email@live.com" <br />
+                Password" "password"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div>
+            <div class="portfolio bookmark">
+              <div class="description">
+                <div class="wrapper">
+                  <div>
+                    <p>
+                      Add functionality to play trailer, add content to "My
+                      List", by pressing the plus button and scrolling through
+                      categories.
+                    </p>
+                    <br />
+                  </div>
+                </div>
+                <div class="image">
+                  <img
+                    src="/assets/img/netflix/landing.png"
+                    alt="netflix landing page"
+                  />
+                  <span
+                    ><caption>
+                      Header appears as user scrolls into the bookmarks
+                    </caption></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="portfolio netflix-membership">
+            <div class="description">
+              <h2>Membership</h2>
+              <p>
+                Built the membership page with functionality to cancel
+                membership, using
+                <a
+                  class="link"
+                  href="https://stripe.com/"
+                  target="_blank"
+                  title="stripe"
+                  >Stripe</a
+                >, or sign out to the login page.
+              </p>
+              <br />
+            </div>
+            <div class="image">
+              <img src="/assets/img/netflix/membership.png" alt="membership" />
+              <span>
+                <caption>
+                  Membership page
+                </caption>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="portfolio netflix-subscription">
+            <div class="image">
+              <img src="/assets/img/netflix/plans.png" alt="subscription" />
+              <span>
+                <caption>
+                  Subscription plans
+                </caption>
+              </span>
+            </div>
+            <div class="description">
+              <h2>Subscription</h2>
+              <p>
+                Built the subscription page using custom data from
+                <a
+                  class="link"
+                  href="https://firebase.google.com/"
+                  target="_blank"
+                  title="firebase"
+                  >Firebase,</a
+                >
+                and
+                <a
+                  class="link"
+                  href="https://stripe.com/"
+                  target="_blank"
+                  title="stripe"
+                  >Stripe.</a
+                >
+              </p>
+              <br />
+              <p>
+                To view this page, sign out and create a new account, using any
+                random email and password, then click "Sign up now". You can
+                subscribe to any plan on the page.
+              </p>
+              <br />
+              <p>
+                Once you select a subscription, you will be taken to the Stripe
+                payment page. Use any test card
+                <a
+                  class="link"
+                  href="https://stripe.com/docs/testing#cards"
+                  target="_blank"
+                  title="stripe test card"
+                  >here</a
+                >
+                to simulate payment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology">
+        <div class="container">
+          <hr class="divider" />
+          <h2>Technologies</h2>
+          <ul>
+            <li>React</li>
+            <li>Next JS</li>
+            <li>Typescript</li>
+            <li>Tailwind</li>
+            <li>Firebase</li>
+            <li>Stripe</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="../script/index.js"></script>
+  </body>
+</html>
