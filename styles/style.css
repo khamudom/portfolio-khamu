@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
 /* General Styles */
 *,
 *::before,
@@ -41,7 +41,7 @@ body,
 button,
 input,
 textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
@@ -97,10 +97,17 @@ img {
   border-radius: 0.25rem;
   font-size: 1rem;
 }
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   background-color: var(--btn-background-primary);
   color: var(--main-font-inverse);
   outline-color: var(--dark-two);
+}
+
+.logo img {
+  outline: none;
+  -webkit-margin-end: 8px;
+  margin-inline-end: 8px;
 }
 
 .section {
@@ -115,7 +122,7 @@ img {
   position: relative;
 }
 .section-header .section-title {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 600;
   font-size: clamp(1.625rem, 5vw, 2rem);
 }
@@ -123,13 +130,13 @@ img {
   opacity: 0.1;
   width: 100%;
   -webkit-margin-start: 1em;
-          margin-inline-start: 1em;
+  margin-inline-start: 1em;
 }
 
 .btn-container {
   display: flex;
   -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  column-gap: 0.5rem;
 }
 
 .transition {
@@ -153,7 +160,7 @@ img {
 .icon-container {
   display: flex;
   -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   justify-content: end;
 }
 .icon-container img {
@@ -180,8 +187,7 @@ nav {
   z-index: 50;
   transition: 0.3s;
   transform: translateY(-100px);
-  -webkit-animation: fadeDownLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
-          animation: fadeDownLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
+  animation: fadeDownLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
 }
 nav .container {
   display: flex;
@@ -204,12 +210,13 @@ nav .logo {
   display: inline-block;
   padding: 0.9em 1.2em;
   color: var(--main-font);
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-size: 1.05rem;
   font-weight: 500;
   line-height: 1;
 }
-.nav-links a.active, .nav-links a:hover {
+.nav-links a.active,
+.nav-links a:hover {
   color: var(--accent-fill);
 }
 .nav-links .social-link {
@@ -231,13 +238,12 @@ nav .logo {
   margin-left: 2em;
 }
 .header-content .header-title {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-size: 4rem;
   line-height: 0.8;
   font-weight: 400;
   opacity: 0;
-  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
-          animation: fadeUpLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
+  animation: fadeUpLoad var(--load-duration) var(--easing) 0.4s 1 forwards;
 }
 .header-content .header-subtitle {
   font-size: 2rem;
@@ -245,18 +251,15 @@ nav .logo {
   font-weight: 400;
   margin-top: 1em;
   opacity: 0;
-  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
-          animation: fadeUpLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
+  animation: fadeUpLoad var(--load-duration) var(--easing) 0.5s 1 forwards;
 }
 .header-content .header-description {
   opacity: 0;
-  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
-          animation: fadeUpLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
+  animation: fadeUpLoad var(--load-duration) var(--easing) 0.6s 1 forwards;
 }
 .header-content .header-btn {
   opacity: 0;
-  -webkit-animation: fadeUpLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
-          animation: fadeUpLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
+  animation: fadeUpLoad var(--load-duration) var(--easing) 0.7s 1 forwards;
 }
 .header-content .text {
   font-size: 1.25rem;
@@ -315,7 +318,7 @@ nav .logo {
   color: var(--main-font);
 }
 .projects-body .project-content a:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   z-index: 0;
@@ -404,7 +407,7 @@ nav .logo {
   flex-wrap: wrap;
   gap: 0.5rem;
   -webkit-margin-end: 2rem;
-          margin-inline-end: 2rem;
+  margin-inline-end: 2rem;
 }
 .about-body .about-me .img-me img {
   width: 9.375rem;
@@ -424,7 +427,7 @@ nav .logo {
   width: 9.375rem;
   height: inherit;
   -webkit-margin-end: 1em;
-          margin-inline-end: 1em;
+  margin-inline-end: 1em;
 }
 .about-body .dog-info .dog .text {
   max-width: 250px;
@@ -487,7 +490,7 @@ nav .logo {
   font-size: 1rem;
   color: var(--main-font);
   -webkit-margin-start: 0.75rem;
-          margin-inline-start: 0.75rem;
+  margin-inline-start: 0.75rem;
 }
 .footer .container .icon-container {
   margin-bottom: 2.5em;
@@ -560,7 +563,7 @@ nav .logo {
   .about-body .about-me .img-me {
     max-width: unset;
     -webkit-margin-end: unset;
-            margin-inline-end: unset;
+    margin-inline-end: unset;
     justify-content: center;
   }
   .about-body .dog-info {
@@ -577,7 +580,7 @@ nav .logo {
     display: flex;
   }
   .contact-body .contact-form .column-left,
-.contact-body .contact-form .column-right {
+  .contact-body .contact-form .column-right {
     width: 100%;
   }
   .contact-body .contact-form .contact-input {
@@ -681,7 +684,7 @@ nav .logo {
   }
   .about-body .img-me {
     -webkit-margin-end: 0;
-            margin-inline-end: 0;
+    margin-inline-end: 0;
   }
   .about-body .about-me p span {
     font-size: 1.5rem;
@@ -697,29 +700,9 @@ nav .logo {
   }
 }
 /* Animations */
-@-webkit-keyframes fadeUpLoad {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes fadeUpLoad {
   from {
     transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeDownLoad {
-  from {
-    transform: translateY(-100px);
     opacity: 0;
   }
   to {
@@ -736,4 +719,4 @@ nav .logo {
     transform: translateY(0);
     opacity: 1;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

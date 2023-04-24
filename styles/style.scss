@@ -110,6 +110,11 @@ img {
   }
 }
 
+.logo img {
+  outline: none;
+  margin-inline-end: 8px;
+}
+
 .section {
   padding: 6em 0;
 }
